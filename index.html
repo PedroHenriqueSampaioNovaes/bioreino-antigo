@@ -12,12 +12,12 @@
 <body>
   <header class="cabecalho">
     <a href="/" class="logo">
-      <img src="src/img/bioreino.svg" alt="Logo da Bioreino" width="200" height="80">
+      <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
     </a>
-    <nav class="navegacao">
-      <ul>
-        <li><a href="login.html">Entrar</a></li>
-        <li><a href="assinar.html">Assinar</a></li>
+    <nav>
+      <ul class="itens_nav">
+        <li><a href="login.html" class="login">Entrar</a></li>
+        <li><a href="#cadastro" class="cadastro">Assinar</a></li>
       </ul>
     </nav>
   </header>
@@ -33,56 +33,70 @@
   </section>
 
   <section class="cursos">
-    <div class="descricao">
-      <h2 class="subtitulo">Cursos</h2>
-      <span class="resumo">conheça alguns de nossos cursos</span>
+    <div class="secao_titulo">
+      <h2>Cursos</h2>
+      <p>conheça alguns de nossos cursos</p>
     </div>
-    <ul>
+    <ul class="container">
       <li>
-        <img src="src/img/cursos/dinossauros.jpg" alt="Curso sobre dinossauros">
-        <div class="titulo_curso">
-          <h3>Os dinossauros</h3>
-          <img src="src/img/cursos/Kids.svg" alt="Plano kids">
-          <img src="src/img/cursos/abc.svg" alt="Imagem ilustrativa ao plano kids">
+        <img src="src/img/cursos/dinossauros.png" alt="Curso sobre dinossauros">
+        <div class="descricao_curso">
+          <div class="titulo_curso">
+            <h3>Os dinossauros</h3>
+            <div class="tipo">
+              <div>
+                <span class="letra_vermelho">K</span><span class="letra_laranja">i</span><span class="letra_azul">d</span><span class="letra_verde">s</span>
+              </div>
+              <img src="src/img/cursos/abc.svg" alt="Imagem ilustrativa ao plano kids">
+            </div>
+          </div>
+          <span class="professor">Prof. Isaak Valentin</span>
+          <p>Aprenda sobre os diversos dinossauros que habitavam nosso mundo!
+          </p>
         </div>
-        <span class="professor">Prof. Isaak Valentin</span>
-        <p>Aprenda sobre os diversos dinossauros que habitavam nosso mundo!
-        </p>
       </li>
       <li>
-        <img src="src/img/cursos/biologia-forense.jpg" alt="Curso sobre biologia forense">
-        <div class="titulo_curso">
-          <h3>Biologia Forense</h3>
-          <span>Professional</span>
-          <img src="src/img/cursos/lab.svg" alt="Imagem ilustrativa ao plano professional">
+        <img src="src/img/cursos/biologia-forense.png" alt="Curso sobre biologia forense">
+        <div class="descricao_curso">
+          <div class="titulo_curso">
+            <h3>Biologia Forense</h3>
+            <div class="tipo">
+              <span>Professional</span>
+              <img src="src/img/cursos/lab.svg" alt="Imagem ilustrativa ao plano professional">
+            </div>
+          </div>
+          <span class="professor">Prof. Fábio de Lima</span>
+          <p>Aprenda táticas investigativas envolvendo a biologia e conheça como os profissionais dessa área trabalham!
+          </p>
         </div>
-        <span class="professor">Prof. Fábio de Lima</span>
-        <p>Aprenda táticas investigativas envolvendo a biologia e conheça como os profissionais dessa área trabalham!
-        </p>
       </li>
       <li>
-        <img src="src/img/cursos/reino-animal.jpg" alt="Curso sobre reino animal">
-        <div class="titulo_curso">
-          <h3>Reino Animal</h3>
-          <span>Scholar</span>
-          <img src="src/img/cursos/mochila.svg" alt="Imagem ilustrativa ao plano scholar">
+        <img src="src/img/cursos/reino-animal.png" alt="Curso sobre reino animal">
+        <div class="descricao_curso">
+          <div class="titulo_curso">
+            <h3>Reino Animal</h3>
+            <div class="tipo">
+              <span>Scholar</span>
+              <img src="src/img/cursos/mochila.svg" alt="Imagem ilustrativa ao plano scholar">
+            </div>
+          </div>
+          <span class="professor">Prof. Ivan Soares</span>
+          <p>Conheça os diversos seres que pertencem a esse reino e suas principais características!
+          </p>
         </div>
-        <span class="professor">Prof. Ivan Soares</span>
-        <p>Conheça os diversos seres que pertencem a esse reino e suas principais características!
-        </p>
       </li>
     </ul>
   </section>
 
   <main class="principal">
     <section class="planos">
-      <div class="descricao">
-        <h2 class="subtitulo">Conheça nossos planos</h2>
-        <span class="resumo">fique por dentro de tudo sobre os planos oferecidos</span>
+      <div class="secao_titulo">
+        <h2>Conheça nossos planos</h2>
+        <p>fique por dentro de tudo sobre os planos oferecidos</p>
       </div>
       <div class="plano">
         <img src="src/img/planos/plano-kids.jpg" alt="Imagem referente ao Plano KIDS">
-        <div>
+        <div class="descricao">
           <h2>Plano KIDS</h2>
           <p>Curabitur non suscipit lacus, sit amet consequat mauris. Mauris egestas,
             odio lacinia convallis efficitur, lorem nulla suscipit ipsum, quis pellentesque
@@ -92,16 +106,16 @@
             Vivamus lectus mi, consectetur in elit vitae, blandit venenatis quam.</p>
         </div>
       </div>
-      <div class="plano">
+      <div class="plano order">
         <img src="src/img/planos/plano-scholar.jpg" alt="Imagem referente ao Plano SCHOLAR">
-        <div>
+        <div class="descricao">
           <h2>Plano SCHOLAR</h2>
           <p>Eius laudantium facilis reiciendis? Quia, modi voluptas illum unde minus assumenda molestias quas atque a aperiam exercitationem iste labore sapiente! Aut, molestias. Distinctio quisquam quibusdam ea eaque inventore! Laborum dolores tenetur eius. Eum nemo ad id similique minus. Quam, modi totam. Ullam, exercitationem ipsam. Architecto temporibus repellat officia, minima hic et eveniet optio, fuga quos saepe sequi tenetur sed voluptate, totam ea. Commodi, tempora? Id, explicabo.</p>
         </div>
       </div>
       <div class="plano">
         <img src="src/img/planos/plano-professional.jpg" alt="Imagem referente ao Plano PROFESSIONAL">
-        <div>
+        <div class="descricao">
           <h2>Plano PROFESSIONAL</h2>
           <p>Hic ratione aut nesciunt architecto officiis, eaque possimus accusamus a odio doloribus debitis! Dolor eaque commodi nisi a, minus molestiae facere repellendus? Impedit deserunt odit quidem molestias cumque, perspiciatis beatae. Quaerat eveniet maxime vero et deleniti, maiores illo porro laborum doloremque, architecto quas consequuntur! Voluptatibus consequuntur placeat eaque odit perferendis, maiores reiciendis, unde fugiat dolorum repellendus quisquam minus possimus nihil incidunt, distinctio sit esse animi illum! Tenetur animi laboriosam nostrum perferendis fugiat ea debitis mollitia minus ab quas distinctio sapiente molestiae dignissimos nihil porro, beatae rem. Eum, explicabo!</p>
         </div>
@@ -109,9 +123,9 @@
     </section>
 
     <section class="depoimento">
-      <div class="descricao">
-        <h2 class="subtitulo">Depoimentos</h2>
-        <span class="resumo">o que alguns de nossos alunos disseram de nossos cursos</span>
+      <div class="secao_titulo">
+        <h2>Depoimentos</h2>
+        <p>o que alguns de nossos alunos disseram de nossos cursos</p>
       </div>
       <div class="depoimentos">
         <div class="depoimento_aluno">
@@ -146,10 +160,10 @@
       </div>
     </section>
 
-    <section class="sessao_planos">
-      <div class="descricao">
-        <h2 class="subtitulo">Inscreva-se</h2>
-        <span class="resumo">assine um plano e tenha acesso a todos os cursos do mesmo</span>
+    <section class="sessao_planos" id="cadastro">
+      <div class="secao_titulo">
+        <h2>Inscreva-se</h2>
+        <p>assine um plano e tenha acesso a todos os cursos do mesmo</p>
       </div>
       <div class="container_planos">
         <div>

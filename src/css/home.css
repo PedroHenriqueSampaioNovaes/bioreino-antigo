@@ -1,0 +1,184 @@
+/* ---------------
+Cabeçalho */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 90px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.cabecalho .itens_nav {
+  display: flex;
+  gap: 20px;
+}
+
+.cabecalho .itens_nav .login {
+  font-size: 18px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 35px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.cabecalho .itens_nav .cadastro {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  border: 1px solid var(--borda-verde);
+  border-radius: 35px;
+  padding: 15px 30px;
+  font-weight: bold;
+  transition: .15s ease-in-out;
+}
+
+.cabecalho .itens_nav .cadastro:hover {
+  background: var(--borda-verde);
+  color: #fff;
+}
+
+/* ---------------
+Introdução */
+.introducao {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 90px;
+}
+
+.introducao .descricao .titulo {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 50px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.introducao .descricao .qualidades {
+  max-width: 570px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* ---------------
+Cursos */
+.cursos {
+  margin-top: 70px;
+  padding: 30px 90px;
+  background-image: linear-gradient(135deg, var(--bg-verde-escuro), var(--bg-verde-claro))
+}
+
+.secao_titulo h2 {
+  font-size: 34px;
+  color: #fff;
+  text-align: center;
+}
+
+.secao_titulo p {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cursos .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.cursos .container li {
+  max-width: 390px;
+  flex: 1 1 240px;
+  background: #fff;
+  border-radius: 20px;
+}
+
+.cursos .titulo_curso {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 5px;
+}
+
+.cursos .descricao_curso {
+  padding: 10px 10px 10px;
+}
+
+.cursos .titulo_curso h3 {
+  font-size: 24px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.cursos .titulo_curso .tipo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cursos .titulo_curso .tipo span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #707070;
+}
+
+.cursos .professor {
+  display: block;
+  font-size: 14px;
+  margin: 4px 0;
+  color: #707070;
+}
+
+/* Cores da palavra KIDS */
+.letra_vermelho {
+  color: #EA7878;
+}
+
+.letra_laranja {
+  color: #EDA86B;
+}
+
+.letra_azul {
+  color: #ACE2E5;
+}
+
+.letra_verde {
+  color: #ACE5B2;
+}
+
+/* --------------- 
+Planos */
+.principal {
+  padding-top: 30px;
+}
+
+.planos .secao_titulo h2, .planos .secao_titulo p {
+  color: #000;
+}
+
+.planos .plano {
+  display: flex;
+  flex-direction: row;
+}
+
+.planos .plano img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.planos .plano .descricao {
+  width: 50%;
+  padding: 125px 50px 0;
+}
+
+.planos .plano.order {
+  flex-direction: row-reverse;
+}
+
