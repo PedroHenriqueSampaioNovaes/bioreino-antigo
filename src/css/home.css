@@ -47,8 +47,17 @@ Cabeçalho */
 Introdução */
 .introducao {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 0 90px;
+}
+
+.introducao .descricao {
+  width: 50%;
+}
+
+.introducao .descricao img {
+  width: 50%;
 }
 
 .introducao .descricao .titulo {
@@ -110,7 +119,7 @@ Cursos */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 5px;
+  gap: 8px 5px;
 }
 
 .cursos .descricao_curso {
@@ -120,7 +129,6 @@ Cursos */
 .cursos .titulo_curso h3 {
   font-size: 24px;
   line-height: 20px;
-  margin-bottom: 8px;
 }
 
 .cursos .titulo_curso .tipo {
@@ -168,7 +176,7 @@ Cursos */
 }
 
 /* --------------- 
-Planos */
+Sobre os planos */
 .planos {
   padding-top: 30px;
 }
@@ -188,14 +196,13 @@ Planos */
 }
 
 .planos .plano img {
-  max-width: 50%;
-  width: 100%;
+  width: 50%;
   object-fit: cover;
 }
 
 .planos .plano .descricao {
   width: 50%;
-  padding: 0 50px 30px;
+  padding: 30px 50px 30px;
   align-self: center;
 }
 
@@ -206,6 +213,7 @@ Planos */
 .planos .plano .descricao p {
   font-size: 18px;
   margin-top: 30px;
+  line-height: 24px;
 }
 
 /* ---------------
@@ -351,7 +359,7 @@ Planos */
   top: 0;
   left: -120%;
   position: absolute;
-  animation: shine .85s forwards;
+  animation: shine .7s forwards;
 }
 
 @keyframes shine {

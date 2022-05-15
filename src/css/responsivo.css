@@ -1,0 +1,187 @@
+@media screen and (max-width: 1250px) {
+  /* ---------------- 
+  Depoimento */
+  .depoimentos .depoimento_aluno .frase_aluno {
+    margin-top: 5px;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  /* ---------------- 
+  Geral */
+  .cabecalho,
+  .introducao,
+  .cursos,
+  .depoimento,
+  .sessao_planos {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  /* ---------------- 
+  Introdução */
+  .introducao {
+    flex-direction: column;
+  }
+
+  .introducao .descricao {
+    text-align: center;
+    width: auto;
+  }
+
+  .introducao .descricao .titulo {
+    margin-top: 0;
+  }
+
+  .introducao .descricao .qualidades {
+    display: inline-block;
+  }
+
+  .introducao img {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  /* ---------------- 
+  Geral */
+  .cabecalho,
+  .introducao,
+  .cursos,
+  .depoimento,
+  .sessao_planos {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  /* ---------------- 
+  Cursos */
+  .cursos .divisoria {
+    flex-direction: column;
+  }
+
+  .cursos .divisoria li {
+    margin: 0 auto;
+  }
+
+  /* --------------- 
+  Sobre os planos */
+  .planos .plano {
+    flex-direction: column !important;
+  }
+
+  .planos .plano img {
+    width: 100%;
+  }
+
+  .planos .plano .descricao {
+    width: 100%;
+    align-self: auto;
+    text-align: center;
+  }
+
+  .planos .plano .descricao p {
+    margin-top: 10px;
+  }
+
+  /* ---------------- 
+  Depoimentos */
+  .depoimentos {
+    flex-direction: column;
+  }
+
+  .depoimentos .depoimento_aluno {
+    margin: 0 auto;
+  }
+
+  /* ---------------- 
+  Planos */
+  .container_planos {
+    flex-direction: column;
+  }
+
+  .container_planos > div {
+    margin: 0 auto 20px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  /* ---------------- 
+  Sobre os planos */
+  .planos .plano .descricao {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .planos .plano .descricao p {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* ---------------- 
+  Cabeçalho */
+  .cabecalho {
+    flex-direction: column;
+  }
+
+  .logo img {
+    margin-bottom: 20px;
+  }
+
+  /* ---------------- 
+  Introdução */
+  .introducao .descricao .titulo {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .introducao .descricao .qualidades {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  /* ---------------- 
+  Cursos */
+  .secao_titulo h2 {
+    font-size: 26px;
+  }
+
+  .secao_titulo p {
+    font-size: 16px;
+  }
+
+  .cursos .divisoria li {
+    flex: 1;
+  }
+
+  .cursos .titulo_curso h3 {
+    font-size: 18px;
+  }
+
+  /* ---------------- 
+  Sobre Cursos */
+  .planos .plano .descricao h2 {
+    font-size: 24px;
+  }
+
+  .planos .plano .descricao p {
+    font-size: 16px;
+  }
+
+  /* ---------------- 
+  Depoimentos */
+  .depoimentos .depoimento_aluno .info_aluno .nome,
+  .depoimentos .depoimento_aluno .frase_aluno {
+    font-size: 16px;
+  }
+
+  /* ---------------- 
+  Planos */
+  .container_planos .plano_titulo {
+    font-size: 28px;
+  }
+}
