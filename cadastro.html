@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="src/img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="src/img/favicon/site.webmanifest">
+  <!-- Style -->
+  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="src/css/home.css">
+  <link rel="stylesheet" href="src/css/login.css">
+  <link rel="stylesheet" href="src/css/cadastro.css">
+  <link rel="stylesheet" href="src/css/responsivo.css">
+  <title>Bioreino - Cadastro</title>
+</head>
+
+<body>
+  <header class="cabecalho">
+    <a href="/" class="logo">
+      <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
+    </a>
+    <nav>
+      <ul class="itens_nav">
+        <li><a href="login.html" class="login">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="dados">
+    <h1 class="info">
+      Registre-se e tenha acesso aos cursos do
+      plano selecionado
+    </h1>
+    <form action="" method="post" class="formulario">
+      <div>
+        <h2>Dados Pessoais</h2>
+        <div>
+          <label for="nome">Nome completo *</label>
+          <input type="text" name="nome" id="nome" required>
+          <label for="senha">Senha *</label>
+          <input type="password" name="senha" id="senha" required>
+          <label for="cpf">CPF *</label>
+          <input type="text" name="cpf" id="cpf" required>
+          <label for="email">Email *</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="endereco">
+          <h2>Endereço</h2>
+          <div>
+            <label for="pais">País *</label>
+            <select name="pais" id="pais">
+            </select>
+            <div class="divisor">
+              <div>
+                <label for="cep">CEP *</label>
+                <input type="text" name="cep" id="cep" required>
+              </div>
+              <div>
+                <label for="logradouro">Logradouro *</label>
+                <input type="text" name="logradouro" id="logradouro" required>
+              </div>
+            </div>
+            <div class="divisor">
+              <div>
+                <label for="numero">Número *</label>
+                <input type="text" name="numero" id="numero" required>
+              </div>
+              <div>
+                <label for="bairro">Bairro *</label>
+                <input type="text" name="bairro" id="bairro" required>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+  </section>
+</body>
+
+</html>

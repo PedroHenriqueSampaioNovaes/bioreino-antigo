@@ -1,0 +1,41 @@
+/* Formulário */
+.dados {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto 50px;
+  padding: 20px 25px;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+.dados .info {
+  font-size: 32px;
+  font-weight: normal;
+  color: #707070;
+  text-align: center;
+  line-height: 38px;
+}
+
+.dados h2 {
+  font-size: 24px;
+  font-weight: normal;
+  color: #707070;
+  margin-bottom: 20px;
+}
+
+.divisor {
+  display: flex;
+  column-gap: 10px;
+}
+
+.divisor > div {
+  flex: 1;
+}
+
+.formulario #pais {
+  display: block;
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 5px;
+  outline: none;
+}

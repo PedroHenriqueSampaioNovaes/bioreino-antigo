@@ -1,4 +1,4 @@
-body {
+#login {
   background-image: linear-gradient(to bottom, var(--bg-verde-escuro), var(--bg-verde-claro));
   height: 100vh;
   display: flex;
@@ -15,9 +15,9 @@ body {
   padding: 30px 20px;
 }
 
-.logo {
+#login .logo {
   display: block;
-  width: 50px;
+  width: 100px;
   margin: 0 auto 40px;
 }
 
@@ -26,6 +26,7 @@ label {
   margin-bottom: 5px;
   text-transform: uppercase;
   font-size: 16px;
+  color: #707070;
 }
 
 input {
