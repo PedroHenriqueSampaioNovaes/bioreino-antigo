@@ -10,7 +10,6 @@
 @media screen and (max-width: 1140px) {
   /* ---------------- 
   Geral */
-  .cabecalho,
   .introducao,
   .cursos,
   .depoimento,
@@ -19,6 +18,26 @@
     padding-right: 45px;
   }
 
+  /* ---------------- 
+  Cabecalho  */
+  .cabecalho {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  /* ---------------- 
+  Geral */
+  .introducao,
+  .cursos,
+  .depoimento,
+  .sessao_planos {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 875px) {
   /* ---------------- 
   Introdução */
   .introducao {
@@ -41,22 +60,7 @@
   .introducao img {
     margin: 0 auto;
   }
-}
 
-@media screen and (max-width: 945px) {
-  /* ---------------- 
-  Geral */
-  .cabecalho,
-  .introducao,
-  .cursos,
-  .depoimento,
-  .sessao_planos {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
-@media screen and (max-width: 875px) {
   /* ---------------- 
   Cursos */
   .cursos .divisoria {
@@ -106,9 +110,20 @@
   .container_planos > div {
     margin: 0 auto 20px;
   }
+
+  /* -- CADASTRO -- */
+  .divisor {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 720px) {
+  /* ---------------- 
+  Introdução */
+  .introducao img {
+    max-width: 50%;
+  }
+
   /* ---------------- 
   Sobre os planos */
   .planos .plano .descricao {
@@ -137,6 +152,10 @@
   .introducao .descricao .titulo {
     font-size: 28px;
     line-height: 36px;
+  }
+
+  .introducao img {
+    max-width: 70%;
   }
 
   .introducao .descricao .qualidades {

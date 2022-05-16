@@ -4,13 +4,18 @@ Cabeçalho */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 90px;
+  width: 100%;
+  padding: 0 60px;
   margin-top: 30px;
   margin-bottom: 50px;
 }
 
-.logo img {
+.logo {
   width: 150px;
+}
+
+.logo img {
+  width: 100%;
 }
 
 .cabecalho .itens_nav {
@@ -33,7 +38,7 @@ Cabeçalho */
   color: #000;
   border: 1px solid var(--borda-verde);
   border-radius: 35px;
-  padding: 15px 30px;
+  padding: 10px 20px;
   font-weight: bold;
   transition: 0.15s ease-in-out;
 }
@@ -58,6 +63,10 @@ Introdução */
 
 .introducao .descricao img {
   width: 50%;
+}
+
+.introducao img {
+  max-width: 32%;
 }
 
 .introducao .descricao .titulo {
@@ -197,6 +206,7 @@ Sobre os planos */
 
 .planos .plano img {
   width: 50%;
+  max-height: 450px;
   object-fit: cover;
 }
 

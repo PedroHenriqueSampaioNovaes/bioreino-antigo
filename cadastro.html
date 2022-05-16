@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
   <link rel="shortcut icon" href="src/img/favicon/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon/favicon-16x16.png">
   <link rel="manifest" href="src/img/favicon/site.webmanifest">
+
   <!-- Style -->
   <link rel="stylesheet" href="src/css/reset.css">
   <link rel="stylesheet" href="src/css/home.css">
@@ -19,7 +21,7 @@
   <title>Bioreino - Cadastro</title>
 </head>
 
-<body>
+<body id="cadastro">
   <header class="cabecalho">
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
@@ -31,15 +33,15 @@
     </nav>
   </header>
 
-  <section class="dados">
-    <h1 class="info">
-      Registre-se e tenha acesso aos cursos do
-      plano selecionado
-    </h1>
-    <form action="" method="post" class="formulario">
-      <div>
-        <h2>Dados Pessoais</h2>
-        <div>
+  <div class="container">
+    <section class="dados">
+      <h1 class="info">
+        Registre-se e tenha acesso aos cursos do
+        plano selecionado
+      </h1>
+      <form action="" method="post" class="formulario">
+        <div class="conjunto_dados">
+          <h2>Dados Pessoais</h2>
           <label for="nome">Nome completo *</label>
           <input type="text" name="nome" id="nome" required>
           <label for="senha">Senha *</label>
@@ -49,11 +51,11 @@
           <label for="email">Email *</label>
           <input type="email" name="email" id="email" required>
         </div>
-        <div class="endereco">
+        <div class="conjunto_dados">
           <h2>Endereço</h2>
           <div>
             <label for="pais">País *</label>
-            <select name="pais" id="pais">
+            <select name="pais" id="pais" required>
             </select>
             <div class="divisor">
               <div>
@@ -77,8 +79,53 @@
             </div>
           </div>
         </div>
-    </form>
-  </section>
+        <div class="conjunto_dados">
+          <h2>Pagamento - cartão de crédito</h2>
+          <div>
+            <div class="divisor">
+              <div>
+                <label for="nome_portador">nome do portador *</label>
+                <input type="text" name="nome_portador" id="nome_portador" required>
+              </div>
+              <div>
+                <label for="num_cartao">número do cartão *</label>
+                <input type="text" name="num_cartao" id="num_cartao" required>
+              </div>
+            </div>
+            <div class="divisor">
+              <div>
+                <label for="validade">validade *</label>
+                <input type="text" name="validade" id="validade" placeholder="MM/AA" required>
+              </div>
+              <div>
+                <label for="cod_seguranca">código de segurança *</label>
+                <input type="text" name="cod_seguranca" id="cod_seguranca" placeholder="CVV" required>
+              </div>
+            </div>
+          </div>
+          <div class="conjunto_dados">
+            <h2>Dados finais</h2>
+            <div>
+              <label for="plano">Selecione um plano *</label>
+              <select name="plano" id="plano" required>
+                <option value=""></option>
+                <option value="kids">Kids</option>
+                <option value="scholar">Scholar</option>
+                <option value="professional">Professional</option>
+              </select>
+            </div>
+            <div class="container_valor">
+              <p>TOTAL DA COMPRA:</p>
+              <span class="total">000,00</span>
+            </div>
+          </div>
+        </div>
+        <div class="btn">
+          <button>Finalizar compra</button>
+        </div>
+      </form>
+    </section>
+  </div>
 </body>
 
 </html>

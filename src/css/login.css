@@ -1,12 +1,12 @@
 #login {
-  background-image: linear-gradient(to bottom, var(--bg-verde-escuro), var(--bg-verde-claro));
+  background-image: linear-gradient(130deg, var(--bg-verde-escuro) 50%, var(--bg-verde-claro) 50%);
   height: 100vh;
   display: flex;
   align-items: center;
   padding: 0 10px;
 }
 
-.container {
+#login .container {
   max-width: 400px;
   width: 100%;
   background: #fff;
@@ -44,7 +44,7 @@ input:focus, input:valid {
   background: #fff;
 }
 
-#email {
+#login #email {
   margin-bottom: 20px;
 }
 
@@ -60,7 +60,7 @@ input:focus, input:valid {
   text-decoration: underline;
 }
 
-.btn {
+#login .btn {
   display: block;
   padding: 20px 70px;
   font-size: 18px;
@@ -73,7 +73,7 @@ input:focus, input:valid {
   transition: .15s ease-in-out;
 }
 
-.btn:hover {
+#login .btn:hover {
   background: var(--bg-verde-escuro);
   color: #fff;
 }
