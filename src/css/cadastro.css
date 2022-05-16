@@ -73,10 +73,8 @@
 }
 
 #cadastro .btn {
-  text-align: center;
-}
-
-#cadastro .btn button {
+  display: block;
+  margin: 0 auto;
   background: none;
   max-width: 240px;
   width: 100%;
@@ -90,7 +88,7 @@
   transition: .15s ease-in-out;
 }
 
-#cadastro .btn button:hover {
+#cadastro .btn:hover {
   background: var(--bg-verde-escuro);
   color: #fff;
 }
