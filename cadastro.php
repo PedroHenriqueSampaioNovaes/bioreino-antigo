@@ -22,6 +22,29 @@
 </head>
 
 <body id="cadastro">
+  <?php
+    session_start();
+    $kids = ''; // variáveis para receber 'selected' nas options
+    $pro = '';
+    $scho = '';
+    $preco = 'R$ 000,00';
+
+    if(!empty($_POST['plano'])){
+      $plano = $_POST['plano']; // guarda qual foi o plano selecionado
+      switch ($plano) { // seta qual será selecionado
+        case "Kids":
+          $kids = 'selected';
+          break;
+        case "Professional":
+          $pro = 'selected';
+          break;
+        case "Scholar":
+          $scho = 'selected';
+          break;
+      }
+    }
+  ?>
+
   <header class="cabecalho">
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
@@ -108,15 +131,17 @@
             <div>
               <label for="plano">Selecione um plano *</label>
               <select name="plano" id="plano" required>
-                <option value=""></option>
-                <option value="kids">Kids</option>
-                <option value="scholar">Scholar</option>
-                <option value="professional">Professional</option>
-              </select>
+                
+                <option value='' ></option>
+                <option value='kids' <?php echo $kids ?>>Kids</option>
+                <option value='scholar' <?php echo $scho ?>>Scholar</option>
+                <option value='professional' <?php echo $pro ?>>Professional</option> 
+    
+              </select> 
             </div>
             <div class="container_valor">
               <p>TOTAL DA COMPRA:</p>
-              <span class="total">R$000,00</span>
+              <span class="total"><?php echo $preco ?></span>
             </div>
           </div>
         </div>
