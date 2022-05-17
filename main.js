@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initSelectionPlano)\n/* harmony export */ });\nfunction initSelectionPlano() {\r\n  \r\n}\r\n\r\nconst total = document.querySelector('.total');\r\nconst plano = document.querySelector('#plano');\r\n\r\nfunction selectPrice() {\r\n  \r\n  const elementPrice = document.querySelector(`[value=\"${this.value}\"]`)\r\n  const price = elementPrice.getAttribute('data-price');\r\n  total.innerText = `R$${price}`;\r\n  \r\n}\r\nplano.addEventListener('click', selectPrice);\n\n//# sourceURL=webpack://web/./src/js/modules/selection-plano.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initSelectionPlano)\n/* harmony export */ });\nfunction initSelectionPlano() {\r\n  const total = document.querySelector('.total');\r\n  const plano = document.querySelector('#plano');\r\n\r\n  function selectPrice() {\r\n    const elementPrice = document.querySelector(`[value=\"${this.value}\"]`);\r\n    const price = elementPrice.getAttribute('data-price');\r\n    total.innerText = `R$${price}`;\r\n  }\r\n  \r\n  if (total && plano) {\r\n    plano.addEventListener('click', selectPrice);\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/selection-plano.js?");
 
 /***/ }),
 
