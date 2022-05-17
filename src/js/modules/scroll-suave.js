@@ -7,11 +7,13 @@ function handleClick(event) {
   const href = this.getAttribute('href');
   const session = document.querySelector(href);
 
-  session.scrollIntoView({
+  const topElement = session.getBoundingClientRect().top - 86.05;
+  window.scrollBy({
+    top: topElement,
     behavior: 'smooth',
-    block: 'start',
-    inline: 'start',
   });
+  linksInternos.forEach((link) => link.classList.remove('ativo'));
+  this.classList.add('ativo');
 }
 
 if (linksInternos) {
