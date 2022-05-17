@@ -18,7 +18,7 @@
   <title>Bioreino - Login</title>
 </head>
 
-<body>
+<body> <?php include('php/verificaLogin.php'); // verifica se está logado ?>
   <main class="container">
     <a href="index.html">
       <img src="src/img/b-bioreino.svg" alt="Logo da Bioreino" class="logo">
