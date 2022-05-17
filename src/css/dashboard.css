@@ -1,0 +1,171 @@
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.cabecalho .logo {
+  width: 150px;
+}
+
+.cabecalho .logo img {
+  width: 100%;
+}
+
+
+/* --------------- 
+Usuário */
+.cabecalho .nav_usuario {
+  max-width: 250px;
+  width: 100%;
+  position: relative;
+}
+
+.cabecalho .login_usuario {
+  width: 100%;
+  border: 1px solid var(--borda-verde);
+  border-radius: 33px;
+  padding: 8px 10px 8px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cabecalho .login_usuario .nome_usuario {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cabecalho .login_usuario .foto_usuario {
+  background: #484B4D;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.nav_usuario .opcoes_usuario {
+  display: block;
+  position: absolute;
+  top: 68px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76%;
+  border-left: 1px solid var(--borda-verde);
+  border-right: 1px solid var(--borda-verde);
+  border-bottom: 1px solid var(--borda-verde);
+  border-radius: 4px;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: .1s ease-in;
+}
+
+.nav_usuario .opcoes_usuario.ativo {
+  height: 26px;
+  visibility: visible;
+}
+
+.nav_usuario .opcoes_usuario .btn_sair {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .15s ease-in-out;
+  padding: 5px;
+}
+
+.nav_usuario .opcoes_usuario .btn_sair:hover {
+  background: var(--bg-verde-escuro);
+  color: #fff;
+}
+
+/* ---------------
+Linha */
+.linha {
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(
+    135deg,
+    var(--bg-verde-escuro),
+    var(--bg-verde-claro)
+  );
+}
+
+/* ---------------
+Vídeos */
+.container_cursos {
+  max-width: 850px;
+  width: 100%;
+  margin: 80px auto;
+  padding: 0 10px;
+}
+
+.container_cursos .titulo_cursos {
+  color: #707070;
+  font-size: 34px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.container_cursos .cursos {
+  border: 1px solid var(--borda-verde);
+  border-radius: 5px;
+  padding: 40px;
+}
+
+.container_cursos .cursos .lista_videos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+
+.container_cursos .cursos .lista_videos li {
+  display: block;
+  width: 48%;
+  height: 250px;
+}
+
+.container_cursos .cursos .lista_videos .video {
+  display: block;
+  background: #484B4D;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+#dados_incorretos {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 400px;
+  width: 100%;
+  background: #eb3f17;
+  text-align: center;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#dados_incorretos p {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+#dados_incorretos .img_erro {
+  width: 25px;
+}
