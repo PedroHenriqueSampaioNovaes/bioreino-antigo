@@ -13,15 +13,13 @@
   <link rel="manifest" href="src/img/favicon/site.webmanifest">
 
   <!-- Style -->
-  <link rel="stylesheet" href="src/css/reset.css">
-  <link rel="stylesheet" href="src/css/home.css">
-  <link rel="stylesheet" href="src/css/login.css">
-  <link rel="stylesheet" href="src/css/cadastro.css">
-  <link rel="stylesheet" href="src/css/responsivo.css">
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/cadastro.css">
+  <link rel="stylesheet" href="./src/css/responsivo.css">
   <title>Bioreino - Cadastro</title>
 </head>
 
-<body id="cadastro">
+<body>
   <header class="cabecalho">
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
@@ -95,11 +93,11 @@
             <div class="divisor">
               <div>
                 <label for="validade">validade *</label>
-                <input type="text" name="validade" id="validade" placeholder="MM/AA" required>
+                <input type="text" name="validade" id="validade" placeholder="MM/AAAA" maxlength="7" required>
               </div>
               <div>
                 <label for="cod_seguranca">código de segurança *</label>
-                <input type="text" name="cod_seguranca" id="cod_seguranca" placeholder="CVV" required>
+                <input type="text" name="cod_seguranca" id="cod_seguranca" placeholder="CVV" maxlength="3" required>
               </div>
             </div>
           </div>
@@ -108,10 +106,9 @@
             <div>
               <label for="plano">Selecione um plano *</label>
               <select name="plano" id="plano" required>
-                <option value=""></option>
-                <option value="kids">Kids</option>
-                <option value="scholar">Scholar</option>
-                <option value="professional">Professional</option>
+                <option value="kids" data-price="300,00">Kids</option>
+                <option value="scholar" data-price="600,00">Scholar</option>
+                <option value="professional" data-price="1200,00">Professional</option>
               </select>
             </div>
             <div class="container_valor">
@@ -120,14 +117,12 @@
             </div>
           </div>
         </div>
-        <div>
-          <button class="btn">Finalizar compra</button>
-        </div>
+        <button type="submit" class="btn">Finalizar compra</button>
       </form>
     </section>
   </div>
 
-  <script type="module" src="src/js/script.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>

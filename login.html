@@ -13,12 +13,12 @@
   <link rel="manifest" href="src/img/favicon/site.webmanifest">
 
   <!-- Style -->
-  <link rel="stylesheet" href="src/css/reset.css">
-  <link rel="stylesheet" href="src/css/login.css">
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/login.css">
   <title>Bioreino - Login</title>
 </head>
 
-<body id="login">
+<body>
   <main class="container">
     <a href="index.html">
       <img src="src/img/b-bioreino.svg" alt="Logo da Bioreino" class="logo">
@@ -33,7 +33,12 @@
     </form>
   </main>
 
-  <script type="module" src="src/js/script.js"></script>
+  <div id="dados_incorretos">
+    <p>Email ou senha incorretos</p>
+    <img class="img_erro" src="src/img/error.svg" alt="Erro no login">
+  </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>

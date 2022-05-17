@@ -14,17 +14,24 @@
   <link rel="manifest" href="src/img/favicon/site.webmanifest">
 
   <!-- Style -->
-  <link rel="stylesheet" href="src/css/reset.css">
-  <link rel="stylesheet" href="src/css/home.css">
-  <link rel="stylesheet" href="src/css/responsivo.css">
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/home.css">
+  <link rel="stylesheet" href="./src/css/responsivo.css">
   <title>Bioreino</title>
 </head>
 
 <body>
-  <header class="cabecalho">
+  <header class="cabecalho" data-scroll>
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
     </a>
+    <nav class="nav_interna">
+      <ul class="itens_secoes_internas">
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#sobre_planos">Sobre os planos</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+      </ul>
+    </nav>
     <nav>
       <ul class="itens_nav">
         <li><a href="login.html" class="login">Entrar</a></li>
@@ -43,7 +50,7 @@
     <img src="src/img/mulher.svg" alt="Imagem de uma garota segurando um coração com folhas ao fundo">
   </section>
 
-  <section class="cursos">
+  <section class="cursos" id="cursos">
     <div class="secao_titulo">
       <h2>Cursos</h2>
       <p>conheça alguns de nossos cursos</p>
@@ -100,7 +107,7 @@
   </section>
 
   <main>
-    <section class="planos">
+    <section class="planos" id="sobre_planos">
       <div class="secao_titulo">
         <h2>Conheça nossos planos</h2>
         <p>fique por dentro de tudo sobre os planos oferecidos</p>
@@ -133,7 +140,7 @@
       </div>
     </section>
 
-    <section class="depoimento">
+    <section class="depoimento" id="depoimentos">
       <div class="secao_titulo">
         <h2>Depoimentos</h2>
         <p>o que alguns de nossos alunos disseram de nossos cursos</p>
@@ -224,7 +231,7 @@
     </section>
   </main>
 
-  <script type="module" src="src/js/script.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
