@@ -62,7 +62,7 @@
         Registre-se e tenha acesso aos cursos do
         plano selecionado
       </h1>
-      <form action="" method="post" class="formulario">
+      <form action="php/cadastrar.php" method="post" class="formulario">
         <div class="conjunto_dados">
           <h2>Dados Pessoais</h2>
           <label for="nome">Nome completo *</label>
@@ -78,7 +78,7 @@
           <h2>Endereço</h2>
           <div>
             <label for="pais">País *</label>
-            <select name="pais" id="pais" required>
+            <select name="pais" id="pais"> <!-- Tirei o required para teste! -->
             </select>
             <div class="divisor">
               <div>
