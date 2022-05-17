@@ -41,4 +41,4 @@ $query = "INSERT INTO alunos(nome, senha, email, cpf, plano) VALUES ('{$NOME}', 
 // execução do comando
 mysqli_query($conexao, $query);
 
-header('Location: ../login.html');
+header('Location: ../login.php');
