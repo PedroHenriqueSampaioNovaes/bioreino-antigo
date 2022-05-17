@@ -20,6 +20,29 @@
 </head>
 
 <body>
+  <?php
+    session_start();
+    $kids = ''; // variáveis para receber 'selected' nas options
+    $pro = '';
+    $scho = '';
+    $preco = 'R$ 000,00';
+
+    if(!empty($_POST['plano'])){
+      $plano = $_POST['plano']; // guarda qual foi o plano selecionado
+      switch ($plano) { // seta qual será selecionado
+        case "Kids":
+          $kids = 'selected';
+          break;
+        case "Professional":
+          $pro = 'selected';
+          break;
+        case "Scholar":
+          $scho = 'selected';
+          break;
+      }
+    }
+  ?>
+
   <header class="cabecalho">
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
@@ -37,7 +60,7 @@
         Registre-se e tenha acesso aos cursos do
         plano selecionado
       </h1>
-      <form action="" method="post" class="formulario">
+      <form action="php/cadastrar.php" method="post" class="formulario">
         <div class="conjunto_dados">
           <h2>Dados Pessoais</h2>
           <label for="nome">Nome completo *</label>
@@ -53,7 +76,7 @@
           <h2>Endereço</h2>
           <div>
             <label for="pais">País *</label>
-            <select name="pais" id="pais" required>
+            <select name="pais" id="pais"> <!-- Tirei o required para teste! -->
             </select>
             <div class="divisor">
               <div>
@@ -106,14 +129,14 @@
             <div>
               <label for="plano">Selecione um plano *</label>
               <select name="plano" id="plano" required>
-                <option value="kids" data-price="300,00">Kids</option>
-                <option value="scholar" data-price="600,00">Scholar</option>
-                <option value="professional" data-price="1200,00">Professional</option>
+                <option value="kids" data-price="300,00" <?php echo $kids ?>>Kids</option>
+                <option value="scholar" data-price="600,00" <?php echo $scho ?>>Scholar</option>
+                <option value="professional" data-price="1200,00" <?php echo $pro ?>>Professional</option>
               </select>
             </div>
             <div class="container_valor">
               <p>TOTAL DA COMPRA:</p>
-              <span class="total">R$000,00</span>
+              <span class="total"><?php echo $preco ?></span>
             </div>
           </div>
         </div>
