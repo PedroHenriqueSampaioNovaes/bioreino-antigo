@@ -10,12 +10,51 @@ Cabeçalho */
   margin-bottom: 50px;
 }
 
+.cabecalho.scroll {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #fff;
+  margin-top: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.274);
+  z-index: 999;
+}
+
 .logo {
   width: 150px;
 }
 
 .logo img {
   width: 100%;
+}
+
+.cabecalho .nav_interna .itens_secoes_internas {
+  display: flex;
+  column-gap: 20px;
+}
+
+.cabecalho .nav_interna .itens_secoes_internas a {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+}
+
+.cabecalho .nav_interna .itens_secoes_internas a.ativo {
+  color: var(--bg-verde-claro);
+}
+
+.cabecalho .nav_interna .itens_secoes_internas li:not(li:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 50%;
+  background: #000;
+  font-size: 12px;
+  margin-left: 15px;
 }
 
 .cabecalho .itens_nav {
@@ -248,7 +287,7 @@ Depoimentos */
   max-width: 380px;
   border-radius: 20px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.205);
-  padding: 15px 25px 15px 15px;
+  padding: 15px 25px 25px 15px;
   flex: 1;
 }
 
@@ -271,6 +310,7 @@ Depoimentos */
   color: #707070;
   font-size: 18px;
   padding-left: 90px;
+  margin-top: 8px;
 }
 
 /* --------------- 

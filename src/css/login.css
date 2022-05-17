@@ -1,12 +1,16 @@
-#login {
-  background-image: linear-gradient(130deg, var(--bg-verde-escuro) 50%, var(--bg-verde-claro) 50%);
+body {
+  background-image: linear-gradient(
+    130deg,
+    var(--bg-verde-escuro) 50%,
+    var(--bg-verde-claro) 50%
+  );
   height: 100vh;
   display: flex;
   align-items: center;
   padding: 0 10px;
 }
 
-#login .container {
+.container {
   max-width: 400px;
   width: 100%;
   background: #fff;
@@ -15,7 +19,7 @@
   padding: 30px 20px;
 }
 
-#login .logo {
+.logo {
   display: block;
   width: 100px;
   margin: 0 auto 40px;
@@ -37,14 +41,14 @@ input {
   outline: none;
   padding: 5px 10px;
   font-size: 14px;
-  background: #A9AEB3;
 }
 
-input:focus, input:valid {
+input:focus,
+input:valid {
   background: #fff;
 }
 
-#login #email {
+#email {
   margin-bottom: 20px;
 }
 
@@ -60,7 +64,7 @@ input:focus, input:valid {
   text-decoration: underline;
 }
 
-#login .btn {
+.btn {
   display: block;
   padding: 20px 70px;
   font-size: 18px;
@@ -70,10 +74,36 @@ input:focus, input:valid {
   border-radius: 20px;
   cursor: pointer;
   margin: 0 auto;
-  transition: .15s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
-#login .btn:hover {
+.btn:hover {
   background: var(--bg-verde-escuro);
   color: #fff;
+}
+
+#dados_incorretos {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 400px;
+  width: 100%;
+  background: #eb3f17;
+  text-align: center;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+#dados_incorretos p {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+#dados_incorretos .img_erro {
+  width: 25px;
 }

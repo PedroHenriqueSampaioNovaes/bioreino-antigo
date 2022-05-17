@@ -2,7 +2,6 @@
   /* ---------------- 
   Depoimento */
   .depoimentos .depoimento_aluno .frase_aluno {
-    margin-top: 5px;
     padding-left: 0;
   }
 }
@@ -117,6 +116,12 @@
   }
 }
 
+@media screen and (max-width: 780px) {
+  .cabecalho .nav_interna .itens_secoes_internas {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 720px) {
   /* ---------------- 
   Introdução */
@@ -134,9 +139,27 @@
   .planos .plano .descricao p {
     text-align: left;
   }
+
+  /* Dashboard */
+  /* ---------------
+  Vídeos */
+  .container_cursos .cursos .lista_videos li {
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 500px) {
+  /* ---------------- 
+  Geral */
+  .secao_titulo h2 {
+    font-size: 26px;
+  }
+
+  .secao_titulo p {
+    font-size: 16px;
+    padding: 0 30px;
+  }
+
   /* ---------------- 
   Cabeçalho */
   .cabecalho {
@@ -165,14 +188,6 @@
 
   /* ---------------- 
   Cursos */
-  .secao_titulo h2 {
-    font-size: 26px;
-  }
-
-  .secao_titulo p {
-    font-size: 16px;
-  }
-
   .cursos .divisoria li {
     flex: 1;
   }
@@ -202,5 +217,17 @@
   Planos */
   .container_planos .plano_titulo {
     font-size: 28px;
+  }
+
+  /* Dashboard */
+  /* ---------------
+  Vídeos */
+  .container_cursos .cursos .lista_videos {
+    flex-direction: column;
+  }
+
+  .container_cursos .cursos .lista_videos li {
+    width: 100%;
+    height: 200px;
   }
 }
