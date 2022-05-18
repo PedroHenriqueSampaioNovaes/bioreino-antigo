@@ -22,6 +22,7 @@
 <body>
   <?php
     session_start();
+    
     $kids = ''; // variáveis para receber 'selected' nas options
     $pro = '';
     $scho = '';
@@ -42,7 +43,12 @@
       }
     }
   ?>
-
+  <?php // verifica se já está logado
+    if(isset($_SESSION['email'])){
+      header('Location: dashboard.php');
+      exit();
+    }
+  ?>
   <header class="cabecalho">
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
@@ -144,11 +150,13 @@
       </form>
     </section>
   </div>
-
+  
+  <?php if(isset($_SESSION['erroCadastro'])):?>
   <div id="dados_incorretos">
-    <p>Erro</p>
-    <img class="img_erro" src="src/img/error.svg" alt="Erro no login">
+    <p><?php echo $_SESSION['erroCadastro'] ?></p>
+    <img class="img_erro" src="src/img/error.svg" alt="Erro no cadastro">
   </div>
+  <?php endif; unset($_SESSION['erroCadastro']);?>
 
   <script src="main.js"></script>
 </body>

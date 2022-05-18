@@ -21,12 +21,15 @@ $emailCheck = mysqli_num_rows(mysqli_query($conexao, "SELECT * FROM alunos WHERE
 
 while ($cpfCheck == 1 || $emailCheck == 1){
     session_start();
-
+    
     if($cpfCheck == 1){
-        $_SESSION['cpfCheck'] == 1; // variável para aparecer erro na tela
+        $_SESSION['erroCadastro'] = 'CPF já cadastrado'; // variável para aparecer erro na tela
     }
     if($emailCheck == 1){
-        $_SESSION['emailCheck'] == 1;
+        $_SESSION['erroCadastro'] = 'E-mail já cadastrado';
+    }
+    if($emailCheck == 1 && $cpfCheck == 1){
+        $_SESSION['erroCadastro'] = 'CPF e e-mail já cadastrados';
     }
 
     header('Location: ../cadastro.php');
