@@ -26,19 +26,22 @@
     $kids = ''; // variáveis para receber 'selected' nas options
     $pro = '';
     $scho = '';
-    $preco = 'R$ 000,00';
+    $preco = 'R$000,00';
 
     if(!empty($_POST['plano'])){
       $plano = $_POST['plano']; // guarda qual foi o plano selecionado
       switch ($plano) { // seta qual será selecionado
         case "Kids":
           $kids = 'selected';
+          $preco = 'R$300,00';
           break;
         case "Professional":
           $pro = 'selected';
+          $preco = 'R$1200,00';
           break;
         case "Scholar":
           $scho = 'selected';
+          $preco = 'R$600,00';
           break;
       }
     }
