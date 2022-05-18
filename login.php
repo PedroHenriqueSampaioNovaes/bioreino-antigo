@@ -35,7 +35,7 @@
       <input type="email" name="email" id="email" required>
       <label for="senha">Senha</label>
       <input type="password" name="senha" id="senha" required>
-      <span class="assine_aqui">Ainda não possui um plano assinado? <a href="index.html#cadastro">Assine aqui</a></span>
+      <span class="assine_aqui">Ainda não possui um plano? <a href="index.html#cadastro">Assine aqui</a></span>
       <button type="submit" class="btn">Logar</button>
     </form>
   </main>
