@@ -49,7 +49,7 @@
     </a>
     <nav>
       <ul class="itens_nav">
-        <li><a href="login.html" class="login">Entrar</a></li>
+        <li><a href="login.php" class="login">Entrar</a></li>
       </ul>
     </nav>
   </header>

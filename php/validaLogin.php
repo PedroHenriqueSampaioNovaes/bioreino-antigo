@@ -9,7 +9,7 @@ include('conexao.php');
 
 // verifica se as informações existem (redundância para segurança)
 if(empty($_POST['email']) || empty($_POST['senha'])){
-    header('Location: login.html');
+    header('Location: login.php');
     exit();
 };
 
@@ -25,10 +25,10 @@ $linhas = mysqli_num_rows($resultado);
 // valida o login
 if($linhas == 1){
     $_SESSION['email'] = $email;
-    header('Location: ../meuscursos.php');
+    header('Location: ../dashboard.php');
     exit();
 } else {
-    header('Location: ../login.html');
+    header('Location: ../login.php');
     exit();
 }
 

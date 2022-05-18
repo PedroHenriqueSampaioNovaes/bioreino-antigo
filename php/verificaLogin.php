@@ -6,7 +6,7 @@ session_start();
 
 // Se não estiver logado, manda para tela de login
 if(!$_SESSION['email']){
-    header('Location: ../login.html');
+    header('Location: ../login.php');
     exit();
 }
 
