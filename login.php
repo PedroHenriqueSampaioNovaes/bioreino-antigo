@@ -32,7 +32,7 @@
     </a>
     <form action="php/validaLogin.php" method="post">
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" required>
+      <input type="email" name="email" id="email" required value="<?php if(isset($_GET['email'])){echo $_GET['email'];}?>">
       <label for="senha">Senha</label>
       <input type="password" name="senha" id="senha" required>
       <span class="assine_aqui">Ainda não possui um plano? <a href="index.html#cadastro">Assine aqui</a></span>

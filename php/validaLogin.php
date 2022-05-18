@@ -30,7 +30,7 @@ if($linhas == 1){
     exit();
 } else {
     $_SESSION['erro'] = 'Login/senha inválidos';
-    header('Location: ../login.php');
+    header('Location: ../login.php?email='.$_POST['email']);
     exit();
 }
 
