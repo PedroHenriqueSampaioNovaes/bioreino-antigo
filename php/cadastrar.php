@@ -12,15 +12,22 @@ if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['cpf']) || e
 $NOME = mysqli_real_escape_string($conexao, $_POST['nome']);
 $SENHA = mysqli_real_escape_string($conexao, $_POST['senha']);
 $EMAIL = mysqli_real_escape_string($conexao, $_POST['email']);
-$CPF = mysqli_real_escape_string($conexao, $_POST['cpf']);
+$CPF = mysqli_real_escape_string($conexao, preg_replace('/[^0-9]/', '', $_POST['cpf'])); // substitui especial
 $PLANO = mysqli_real_escape_string($conexao, $_POST['plano']);
+
+// verifica CPF
+session_start();
+if (strlen(preg_replace('/[^0-9]/', '', $_POST['cpf'])!=11)){
+    $_SESSION['erroCadastro'] = 'CPF digitado errado';
+    header('Location: ../cadastro.php');
+    exit();
+}
 
 // verifica se existe alguém
 $cpfCheck = mysqli_num_rows(mysqli_query($conexao, "SELECT * FROM alunos WHERE cpf = '{$CPF}'"));
 $emailCheck = mysqli_num_rows(mysqli_query($conexao, "SELECT * FROM alunos WHERE email = '{$EMAIL}'"));
 
 while ($cpfCheck == 1 || $emailCheck == 1){
-    session_start();
     
     if($cpfCheck == 1){
         $_SESSION['erroCadastro'] = 'CPF já cadastrado'; // variável para aparecer erro na tela
