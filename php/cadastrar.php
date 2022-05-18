@@ -1,6 +1,7 @@
 <?php
 // faz a conexão com o banco
 include('conexao.php');
+session_start();
 
 // verifica se alguma informação não foi preenchida
 if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['cpf']) || empty($_POST['plano']) || empty($_POST['nome'])){
@@ -16,10 +17,9 @@ $CPF = mysqli_real_escape_string($conexao, preg_replace('/[^0-9]/', '', $_POST['
 $PLANO = mysqli_real_escape_string($conexao, $_POST['plano']);
 
 // verifica CPF
-session_start();
-if (strlen(preg_replace('/[^0-9]/', '', $_POST['cpf'])!=11)){
+if (strlen(preg_replace('/[^0-9]/', '', $_POST['cpf']))!=11){
     $_SESSION['erroCadastro'] = 'CPF digitado errado';
-    header('Location: ../cadastro.php');
+    //header('Location: ../cadastro.php');
     exit();
 }
 
