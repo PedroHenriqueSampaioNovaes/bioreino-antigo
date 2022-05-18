@@ -16,7 +16,7 @@
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAlterHeader)\n/* harmony export */ });\nfunction initAlterHeader() {\r\n  const cabecalho = document.querySelector('[data-scroll]');\r\n\r\n  function toggleHeader() {\r\n    const distanciaScroll = window.pageYOffset > 60;\r\n    if (distanciaScroll) {\r\n      if (!cabecalho.classList.contains('scroll')) {\r\n        cabecalho.classList.add('scroll');\r\n      }\r\n    } else {\r\n      cabecalho.classList.remove('scroll');\r\n    }\r\n  }\r\n  \r\n  if (cabecalho) {\r\n    toggleHeader()\r\n    window.addEventListener('scroll', toggleHeader);\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/alter-header.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initAlterHeader)\n/* harmony export */ });\nfunction initAlterHeader() {\r\n  const cabecalho = document.querySelector('[data-scroll]');\r\n\r\n  function toggleHeader() {\r\n    const distanciaScroll = window.pageYOffset > 20;\r\n    if (distanciaScroll) {\r\n      if (!cabecalho.classList.contains('scroll')) {\r\n        cabecalho.classList.add('scroll');\r\n      }\r\n    } else {\r\n      cabecalho.classList.remove('scroll');\r\n    }\r\n  }\r\n  \r\n  if (cabecalho) {\r\n    toggleHeader()\r\n    window.addEventListener('scroll', toggleHeader);\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/alter-header.js?");
 
 /***/ }),
 

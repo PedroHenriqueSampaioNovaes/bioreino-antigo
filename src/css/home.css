@@ -21,6 +21,7 @@ Cabeçalho */
   padding-bottom: 20px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.274);
   z-index: 999;
+  transition: .4s;
 }
 
 .logo {
@@ -34,6 +35,7 @@ Cabeçalho */
 .cabecalho .nav_interna .itens_secoes_internas {
   display: flex;
   column-gap: 20px;
+  margin-left: 125px;
 }
 
 .cabecalho .nav_interna .itens_secoes_internas a {
@@ -45,6 +47,7 @@ Cabeçalho */
 
 .cabecalho .nav_interna .itens_secoes_internas a.ativo {
   color: var(--bg-verde-claro);
+  font-size: 14px;
 }
 
 .cabecalho .nav_interna .itens_secoes_internas li:not(li:last-child)::after {

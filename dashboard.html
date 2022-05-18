@@ -67,11 +67,6 @@
     </main>
   </section>
 
-  <div id="dados_incorretos">
-    <p>Erro</p>
-    <img class="img_erro" src="src/img/error.svg" alt="Erro no login">
-  </div>
-
   <script src="main.js"></script>
 </body>
 
