@@ -18,7 +18,14 @@
   <title>Bioreino - Login</title>
 </head>
 
-<body> <?php include('php/verificaLogin.php'); // verifica se está logado ?>
+<body>
+  <?php // verifica se já está logado
+    session_start();
+    if(isset($_SESSION['email'])){
+      header('Location: dashboard.php');
+      exit();
+    }
+  ?>
   <main class="container">
     <a href="index.html">
       <img src="src/img/b-bioreino.svg" alt="Logo da Bioreino" class="logo">
@@ -33,11 +40,17 @@
     </form>
   </main>
 
-  <div id="dados_incorretos">
-    <p>Email ou senha incorretos</p>
-    <img class="img_erro" src="src/img/error.svg" alt="Erro no login">
-  </div>
-
+  <?php 
+  if(isset($_SESSION['erro'])){
+    $erro = $_SESSION['erro'];
+    echo
+    "<div id='dados_incorretos'>
+      <p>$erro</p>
+      <img class='img_erro' src='src/img/error.svg' alt='Erro no login'>
+    </div>";
+    unset($_SESSION['erro']);
+    }
+  ?>
   <script src="main.js"></script>
 </body>
 
