@@ -34,7 +34,6 @@ Cabeçalho */
 
 .cabecalho .nav_interna .itens_secoes_internas {
   display: flex;
-  /* column-gap: 20px; */
   margin-left: 125px;
 }
 
@@ -43,6 +42,7 @@ Cabeçalho */
   text-transform: uppercase;
   color: #000;
   font-weight: 600;
+  letter-spacing: 0.6px;
 }
 
 .cabecalho .nav_interna .itens_secoes_internas a.ativo {
