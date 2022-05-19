@@ -20,13 +20,20 @@
 </head>
 
 <body>
+  <?php
+    session_start();
+    include('php/conexao.php'); // conecta com o banco
+    $email = $_SESSION['email'];
+    $query = mysqli_query($conexao, "SELECT nome FROM alunos WHERE email = '{$email}'");
+    $row = mysqli_fetch_array($query);
+  ?>
   <header class="cabecalho">
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
     </a>
     <nav class="nav_usuario">
       <div class="login_usuario">
-        <p class="nome_usuario">Pedro Henrique</p>
+        <p class="nome_usuario"><?php echo $row['nome'] ?></p>
         <span class="foto_usuario"></span>
       </div>
       <ul class="opcoes_usuario">

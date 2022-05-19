@@ -9,7 +9,8 @@ include('conexao.php');
 
 // verifica se as informações existem (redundância para segurança)
 if(empty($_POST['email']) || empty($_POST['senha'])){
-    header('Location: login.php');
+    $_SESSION['erro'] = 'Há campos não preenchidos!';
+    header('Location: ../login.php');
     exit();
 };
 
@@ -28,7 +29,8 @@ if($linhas == 1){
     header('Location: ../dashboard.php');
     exit();
 } else {
-    header('Location: ../login.php');
+    $_SESSION['erro'] = 'Login/senha inválidos';
+    header('Location: ../login.php?email='.$_POST['email']);
     exit();
 }
 

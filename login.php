@@ -19,25 +19,38 @@
 </head>
 
 <body>
+  <?php // verifica se já está logado
+    session_start();
+    if(isset($_SESSION['email'])){
+      header('Location: dashboard.php');
+      exit();
+    }
+  ?>
   <main class="container">
     <a href="index.html">
       <img src="src/img/b-bioreino.svg" alt="Logo da Bioreino" class="logo">
     </a>
     <form action="php/validaLogin.php" method="post">
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" required>
+      <input type="email" name="email" id="email" required value="<?php if(isset($_GET['email'])){echo $_GET['email'];}?>">
       <label for="senha">Senha</label>
       <input type="password" name="senha" id="senha" required>
-      <span class="assine_aqui">Ainda não contém um plano assinado? <a href="index.html#cadastro">Assine aqui</a></span>
+      <span class="assine_aqui">Ainda não possui um plano? <a href="index.html#cadastro">Assine aqui</a></span>
       <button type="submit" class="btn">Logar</button>
     </form>
   </main>
 
-  <div id="dados_incorretos">
-    <p>Email ou senha incorretos</p>
-    <img class="img_erro" src="src/img/error.svg" alt="Erro no login">
-  </div>
-
+  <?php 
+  if(isset($_SESSION['erro'])){
+    $erro = $_SESSION['erro'];
+    echo
+    "<div id='dados_incorretos'>
+      <p>$erro</p>
+      <img class='img_erro' src='src/img/error.svg' alt='Erro no login'>
+    </div>";
+    unset($_SESSION['erro']);
+    }
+  ?>
   <script src="main.js"></script>
 </body>
 

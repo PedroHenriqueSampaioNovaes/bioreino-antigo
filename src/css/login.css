@@ -54,14 +54,14 @@ input:valid {
 
 .assine_aqui {
   display: block;
-  margin-top: 2px;
+  margin-top: 4px;
   margin-bottom: 20px;
   font-style: italic;
   font-size: 14px;
 }
 
 .assine_aqui a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn {
@@ -84,7 +84,7 @@ input:valid {
 
 #dados_incorretos {
   position: fixed;
-  top: 30px;
+  top: 42px;
   left: 50%;
   transform: translateX(-50%);
   max-width: 400px;

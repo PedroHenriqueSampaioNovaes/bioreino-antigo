@@ -1,6 +1,7 @@
 <?php
 // faz a conexão com o banco
 include('conexao.php');
+session_start();
 
 // verifica se alguma informação não foi preenchida
 if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['cpf']) || empty($_POST['plano']) || empty($_POST['nome'])){
@@ -12,21 +13,30 @@ if(empty($_POST['email']) || empty($_POST['senha']) || empty($_POST['cpf']) || e
 $NOME = mysqli_real_escape_string($conexao, $_POST['nome']);
 $SENHA = mysqli_real_escape_string($conexao, $_POST['senha']);
 $EMAIL = mysqli_real_escape_string($conexao, $_POST['email']);
-$CPF = mysqli_real_escape_string($conexao, $_POST['cpf']);
+$CPF = mysqli_real_escape_string($conexao, preg_replace('/[^0-9]/', '', $_POST['cpf'])); // substitui especial
 $PLANO = mysqli_real_escape_string($conexao, $_POST['plano']);
+
+// verifica CPF
+if (strlen(preg_replace('/[^0-9]/', '', $_POST['cpf']))!=11){
+    $_SESSION['erroCadastro'] = 'CPF digitado errado';
+    //header('Location: ../cadastro.php');
+    exit();
+}
 
 // verifica se existe alguém
 $cpfCheck = mysqli_num_rows(mysqli_query($conexao, "SELECT * FROM alunos WHERE cpf = '{$CPF}'"));
 $emailCheck = mysqli_num_rows(mysqli_query($conexao, "SELECT * FROM alunos WHERE email = '{$EMAIL}'"));
 
 while ($cpfCheck == 1 || $emailCheck == 1){
-    session_start();
-
+    
     if($cpfCheck == 1){
-        $_SESSION['cpfCheck'] == 1; // variável para aparecer erro na tela
+        $_SESSION['erroCadastro'] = 'CPF já cadastrado'; // variável para aparecer erro na tela
     }
     if($emailCheck == 1){
-        $_SESSION['emailCheck'] == 1;
+        $_SESSION['erroCadastro'] = 'E-mail já cadastrado';
+    }
+    if($emailCheck == 1 && $cpfCheck == 1){
+        $_SESSION['erroCadastro'] = 'CPF e e-mail já cadastrados';
     }
 
     header('Location: ../cadastro.php');
