@@ -26,7 +26,7 @@
     $kids = ''; // variáveis para receber 'selected' nas options
     $pro = '';
     $scho = '';
-    $preco = 'R$000,00';
+    $preco = '';
 
     if(!empty($_POST['plano'])){
       $plano = $_POST['plano']; // guarda qual foi o plano selecionado
@@ -62,7 +62,25 @@
       </ul>
     </nav>
   </header>
-
+  <?php
+    if(isset($_GET['email'])){
+      $NOME = $_GET['nome'];
+      $CPF = $_GET['cpf'];
+      $EMAIL = $_GET['email'];
+      $CEP = $_GET['cep'];
+      $LOGRADOURO = $_GET['logradouro'];
+      $NUMERO = $_GET['numero'];
+      $BAIRRO = $_GET['bairro'];
+    } else {
+      $NOME = '';
+      $CPF = '';
+      $EMAIL = '';
+      $CEP = '';
+      $LOGRADOURO = '';
+      $NUMERO = '';
+      $BAIRRO = '';
+    }
+  ?>
   <div class="container">
     <section class="dados">
       <h1 class="info">
@@ -73,13 +91,13 @@
         <div class="conjunto_dados">
           <h2>Dados Pessoais</h2>
           <label for="nome">Nome completo *</label>
-          <input type="text" name="nome" id="nome" required>
+          <input type="text" name="nome" id="nome" required value=<?php echo $NOME?>>
           <label for="senha">Senha *</label>
           <input type="password" name="senha" id="senha" required>
           <label for="cpf">CPF *</label>
-          <input type="text" name="cpf" id="cpf" required>
+          <input type="text" name="cpf" id="cpf" required  value=<?php echo $CPF?>>
           <label for="email">Email *</label>
-          <input type="email" name="email" id="email" required>
+          <input type="email" name="email" id="email" required value=<?php echo $EMAIL?>>
         </div>
         <div class="conjunto_dados">
           <h2>Endereço</h2>
@@ -89,22 +107,22 @@
             </select>
             <div class="divisor">
               <div>
-                <label for="cep">CEP *</label>
-                <input type="text" name="cep" id="cep" required>
+                <label for="cep" >CEP *</label>
+                <input type="text" name="cep" id="cep" required value=<?php echo $CEP?>>
               </div>
               <div>
                 <label for="logradouro">Logradouro *</label>
-                <input type="text" name="logradouro" id="logradouro" required>
+                <input type="text" name="logradouro" id="logradouro" required value=<?php echo $LOGRADOURO?>>
               </div>
             </div>
             <div class="divisor">
               <div>
                 <label for="numero">Número *</label>
-                <input type="text" name="numero" id="numero" required>
+                <input type="text" name="numero" id="numero" required value=<?php echo $NUMERO?>>
               </div>
               <div>
                 <label for="bairro">Bairro *</label>
-                <input type="text" name="bairro" id="bairro" required>
+                <input type="text" name="bairro" id="bairro" required value=<?php echo $BAIRRO?>>
               </div>
             </div>
           </div>

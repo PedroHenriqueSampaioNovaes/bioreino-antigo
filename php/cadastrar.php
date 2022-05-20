@@ -16,10 +16,20 @@ $EMAIL = mysqli_real_escape_string($conexao, $_POST['email']);
 $CPF = mysqli_real_escape_string($conexao, preg_replace('/[^0-9]/', '', $_POST['cpf'])); // substitui especial
 $PLANO = mysqli_real_escape_string($conexao, $_POST['plano']);
 
+// dados para caso dê algum erro
+$nomePost = $_POST['nome'];
+$cpfPost = $_POST['cpf'];
+$CEP = $_POST['cep'];
+$LOGRADOURO = $_POST['logradouro'];
+$NUMERO = $_POST['numero'];
+$BAIRRO = $_POST['bairro'];
+$urlErro = "?nome={$nomePost}&email={$EMAIL}&cpf={$cpfPost}&cep={$CEP}&logradouro={$LOGRADOURO}&numero={$NUMERO}&bairro={$BAIRRO}";
+
+
 // verifica CPF
 if (strlen(preg_replace('/[^0-9]/', '', $_POST['cpf']))!=11){
     $_SESSION['erroCadastro'] = 'CPF digitado errado';
-    //header('Location: ../cadastro.php');
+    header('Location: ../cadastro.php'.$urlErro);
     exit();
 }
 
@@ -39,7 +49,7 @@ while ($cpfCheck == 1 || $emailCheck == 1){
         $_SESSION['erroCadastro'] = 'CPF e e-mail já cadastrados';
     }
 
-    header('Location: ../cadastro.php');
+    header('Location: ../cadastro.php'.$urlErro);
     exit();
     break;
 }
