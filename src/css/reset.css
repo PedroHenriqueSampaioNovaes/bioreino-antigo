@@ -20,6 +20,10 @@ img {
   max-width: 100%;
 }
 
+cite {
+  font-style: normal;
+}
+
 
 :root {
   --borda-verde: #27AE00;
