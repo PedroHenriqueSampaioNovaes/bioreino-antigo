@@ -28,7 +28,7 @@
   ?>
   <main class="container">
     <a href="index.html">
-      <img src="src/img/b-bioreino.svg" alt="Logo da Bioreino" class="logo">
+      <img src="src/img/b-bioreino.svg" alt="Retornar para a página principal" class="logo">
     </a>
     <form action="php/validaLogin.php" method="post">
       <label for="email">Email</label>
