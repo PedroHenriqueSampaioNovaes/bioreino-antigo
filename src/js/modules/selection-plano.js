@@ -7,8 +7,7 @@ export default function initSelectionPlano() {
     const price = elementPrice.getAttribute('data-price');
     total.innerText = `R$${price}`;
   }
-  selectPrice();
-  
+
   if (total && plano) {
     plano.addEventListener('click', selectPrice);
   }

@@ -31,12 +31,12 @@
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
     </a>
-    <nav class="nav_usuario">
+    <nav class="nav_usuario" data-dropdown="nav">
       <div class="login_usuario">
         <p class="nome_usuario"><?php echo $row['nome'] ?></p>
         <span class="foto_usuario"></span>
       </div>
-      <ul class="opcoes_usuario">
+      <ul class="opcoes_usuario" data-dropdown="menu">
         <li>
           <form action="/php/sair.php">
             <button type="submit" class="btn_sair">Sair</button>
@@ -46,7 +46,7 @@
     </nav>
   </header>
 
-  <div class="linha"></div>
+  <hr class="separador"></hr>
 
   <section class="container_cursos">
     <h1 class="titulo_cursos">Meus cursos</h1>

@@ -20,13 +20,23 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/js/modules/dropdown-menu.js":
+/*!*****************************************!*\
+  !*** ./src/js/modules/dropdown-menu.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initDropdownMenu)\n/* harmony export */ });\nfunction initDropdownMenu() {\r\n  \r\n}\r\n\r\nconst navegacaoUsuario = document.querySelector('[data-dropdown=\"nav\"]');\r\nconst menuDropdown = document.querySelector('[data-dropdown=\"menu\"]');\r\nconst events = ['click', 'touch'];\r\n\r\nfunction closeMenu(element) {\r\n  if (menuDropdown.contains(element.target)) {\r\n    menuDropdown.classList.remove('ativo');\r\n  }\r\n}\r\n\r\nfunction openMenu() {\r\n  menuDropdown.classList.add('ativo');\r\n  closeMenu(this);\r\n}\r\nevents.forEach((event) => navegacaoUsuario.addEventListener(event, openMenu));\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/dropdown-menu.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/scroll-suave.js":
 /*!****************************************!*\
   !*** ./src/js/modules/scroll-suave.js ***!
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initScrollSuave)\n/* harmony export */ });\nfunction initScrollSuave() {}\r\n\r\nconst linksInternos = document.querySelectorAll('a[href^=\"#\"]');\r\n\r\nfunction handleClick(event) {\r\n  event.preventDefault();\r\n  const href = this.getAttribute('href');\r\n  const session = document.querySelector(href);\r\n\r\n  const topElement = session.getBoundingClientRect().top - 86.05;\r\n  window.scrollBy({\r\n    top: topElement,\r\n    behavior: 'smooth',\r\n  });\r\n  linksInternos.forEach((link) => link.classList.remove('ativo'));\r\n  this.classList.add('ativo');\r\n}\r\n\r\nif (linksInternos) {\r\n  linksInternos.forEach((link) => link.addEventListener('click', handleClick));\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/scroll-suave.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initScrollSuave)\n/* harmony export */ });\nfunction initScrollSuave() {\r\n  const linksInternos = document.querySelectorAll('a[href^=\"#\"]');\r\n\r\n  function handleClick(event) {\r\n    event.preventDefault();\r\n    const href = this.getAttribute('href');\r\n    const session = document.querySelector(href);\r\n\r\n    const topElement = session.getBoundingClientRect().top - 86.05;\r\n    window.scrollBy({\r\n      top: topElement,\r\n      behavior: 'smooth',\r\n    });\r\n    linksInternos.forEach((link) => link.classList.remove('ativo'));\r\n    this.classList.add('ativo');\r\n  }\r\n\r\n  if (linksInternos) {\r\n    linksInternos.forEach((link) =>\r\n      link.addEventListener('click', handleClick),\r\n    );\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/scroll-suave.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initSelectionPlano)\n/* harmony export */ });\nfunction initSelectionPlano() {\r\n  const total = document.querySelector('.total');\r\n  const plano = document.querySelector('#plano');\r\n\r\n  function selectPrice() {\r\n    const elementPrice = document.querySelector(`[value=\"${this.value}\"]`);\r\n    const price = elementPrice.getAttribute('data-price');\r\n    total.innerText = `R$${price}`;\r\n  }\r\n  \r\n  if (total && plano) {\r\n    plano.addEventListener('click', selectPrice);\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/selection-plano.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initSelectionPlano)\n/* harmony export */ });\nfunction initSelectionPlano() {\r\n  const total = document.querySelector('.total');\r\n  const plano = document.querySelector('#plano');\r\n\r\n  function selectPrice() {\r\n    const elementPrice = document.querySelector(`[value=\"${this.value}\"]`);\r\n    const price = elementPrice.getAttribute('data-price');\r\n    total.innerText = `R$${price}`;\r\n  }\r\n\r\n  if (total && plano) {\r\n    plano.addEventListener('click', selectPrice);\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/selection-plano.js?");
 
 /***/ }),
 
@@ -46,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scroll_suave_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scroll-suave.js */ \"./src/js/modules/scroll-suave.js\");\n/* harmony import */ var _modules_alter_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/alter-header.js */ \"./src/js/modules/alter-header.js\");\n/* harmony import */ var _modules_selection_plano_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/selection-plano.js */ \"./src/js/modules/selection-plano.js\");\n\r\n\r\n\r\n\r\n(0,_modules_scroll_suave_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_alter_header_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_selection_plano_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\n\n//# sourceURL=webpack://web/./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scroll_suave_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scroll-suave.js */ \"./src/js/modules/scroll-suave.js\");\n/* harmony import */ var _modules_alter_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/alter-header.js */ \"./src/js/modules/alter-header.js\");\n/* harmony import */ var _modules_selection_plano_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/selection-plano.js */ \"./src/js/modules/selection-plano.js\");\n/* harmony import */ var _modules_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/dropdown-menu.js */ \"./src/js/modules/dropdown-menu.js\");\n\r\n\r\n\r\n\r\n\r\n(0,_modules_scroll_suave_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_alter_header_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_selection_plano_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\n\n//# sourceURL=webpack://web/./src/js/script.js?");
 
 /***/ })
 

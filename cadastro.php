@@ -138,14 +138,14 @@
             <div>
               <label for="plano">Selecione um plano *</label>
               <select name="plano" id="plano" required>
-                <option value="kids" data-price="300,00" <?php echo $kids ?>>Kids</option>
-                <option value="scholar" data-price="600,00" <?php echo $scho ?>>Scholar</option>
-                <option value="professional" data-price="1200,00" <?php echo $pro ?>>Professional</option>
+                <option value="kids" data-price="300,00" <?php echo $kids ?>Kids</option>
+                <option value="scholar" data-price="600,00" <?php echo $scho ?>Scholar</option>
+                <option value="professional" data-price="1200,00" <?php echo $pro ?>Professional</option>
               </select>
             </div>
             <div class="container_valor">
               <p>TOTAL DA COMPRA:</p>
-              <span class="total"><?php echo $preco ?></span>
+              <span class="total"><?php echo $preco ?>R$300,00</span>
             </div>
           </div>
         </div>

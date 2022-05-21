@@ -38,7 +38,6 @@ input {
   height: 42px;
   border: 1px solid #707070;
   border-radius: 5px;
-  outline: none;
   padding: 5px 10px;
   font-size: 14px;
 }
@@ -56,12 +55,12 @@ input:valid {
   display: block;
   margin-top: 4px;
   margin-bottom: 20px;
-  font-style: italic;
   font-size: 14px;
 }
 
 .assine_aqui a {
-  text-decoration: none;
+  text-decoration: underline;
+  font-style: italic;
 }
 
 .btn {

@@ -90,7 +90,7 @@ Usuário */
 
 /* ---------------
 Linha */
-.linha {
+.separador {
   width: 100%;
   height: 10px;
   background-image: linear-gradient(
@@ -98,6 +98,7 @@ Linha */
     var(--bg-verde-escuro),
     var(--bg-verde-claro)
   );
+  border: none;
 }
 
 /* ---------------
