@@ -1,8 +1,12 @@
 @media screen and (max-width: 1250px) {
   /* ---------------- 
-  Depoimento */
+  Depoimentos */
   .depoimentos .depoimento_aluno .frase_aluno {
-    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .depoimentos .depoimento_aluno .frase_aluno::before {
+    display: none;
   }
 }
 
@@ -36,13 +40,15 @@
   }
 }
 
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 915px) {
   /* ---------------- 
   Cabeçalho */
   .cabecalho .nav_interna .itens_secoes_internas {
     display: none;
   }
+}
 
+@media screen and (max-width: 875px) {
   /* ---------------- 
   Introdução */
   .introducao {
