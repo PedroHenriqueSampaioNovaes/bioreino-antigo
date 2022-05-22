@@ -12,7 +12,7 @@ $plano = $query[0];
 switch ($plano){
     case "kids":
         // curso dos dinossauros:
-        $curso1 = "
+        $curso1 = "<div class = 'boxCurso'>
         <img src='src/img/cursos/dinossauros.png' alt='Curso sobre dinossauros.'>
         <div class='descricao_curso'>
           <div class='titulo_curso'>
@@ -28,11 +28,11 @@ switch ($plano){
           <p class='sobre'>Aprenda sobre os diversos dinossauros que habitavam nosso mundo!
           </p>
         </div>
-        ";
+        </div>";
         break;
     case "professional":
         // forense:
-        $curso1 ="
+        $curso1 = "<div class = 'boxCurso'>
         <img src='src/img/cursos/biologia-forense.png' alt='Curso sobre biologia forense.'>
         <div class='descricao_curso'>
           <div class='titulo_curso'>
@@ -46,11 +46,11 @@ switch ($plano){
           <p class='sobre'>Aprenda táticas investigativas envolvendo a biologia e conheça como os profissionais dessa área trabalham!
           </p>
         </div>
-        ";
+        </div>";
         break;
     case "scholar":
         // reino animal:
-        $curso1="
+        $curso1= "<div class = 'boxCurso'>
         <img src='src/img/cursos/reino-animal.png' alt='Curso sobre reino animal.'>
         <div class='descricao_curso'>
           <div class='titulo_curso'>
@@ -64,7 +64,7 @@ switch ($plano){
           <p class='sobre'>Conheça os diversos seres que pertencem a esse reino e suas principais características!
           </p>
         </div>
-        ";
+        </div>";
         break;
     };
 ?>
