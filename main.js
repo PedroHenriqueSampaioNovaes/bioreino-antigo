@@ -20,6 +20,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/js/modules/close-popup.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/close-popup.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initClosePopup)\n/* harmony export */ });\nfunction initClosePopup() {\r\n  const buttonClose = document.querySelector('[data-popup=\"fechar\"]');\r\n\r\n  function closePopup() {\r\n    this.parentElement.remove();\r\n  }\r\n  \r\n  if (buttonClose) buttonClose.addEventListener('click', closePopup);\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/close-popup.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/dropdown-menu.js":
 /*!*****************************************!*\
   !*** ./src/js/modules/dropdown-menu.js ***!
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initScrollSuave)\n/* harmony export */ });\nfunction initScrollSuave() {\r\n  const linksInternos = document.querySelectorAll('a[href^=\"#\"]');\r\n\r\n  function handleClick(event) {\r\n    event.preventDefault();\r\n    const href = this.getAttribute('href');\r\n    const session = document.querySelector(href);\r\n\r\n    const topElement = session.getBoundingClientRect().top - 86.05;\r\n    // window.scrollBy({\r\n    //   top: topElement,\r\n    //   behavior: 'smooth',\r\n    // });\r\n    document.querySelector('.cabecalho').scrollBy({\r\n      top: topElement,\r\n      behavior: 'smooth',\r\n    });\r\n    console.log('a')\r\n    linksInternos.forEach((link) => link.classList.remove('ativo'));\r\n    this.classList.add('ativo');\r\n  }\r\n\r\n  if (linksInternos) {\r\n    linksInternos.forEach((link) =>\r\n      link.addEventListener('click', handleClick),\r\n    );\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/scroll-suave.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ initScrollSuave)\n/* harmony export */ });\nfunction initScrollSuave() {\r\n  const linksInternos = document.querySelectorAll('a[href^=\"#\"]');\r\n\r\n  function handleClick(event) {\r\n    event.preventDefault();\r\n    const href = this.getAttribute('href');\r\n    const session = document.querySelector(href);\r\n\r\n    const topElement = session.getBoundingClientRect().top - 86.05;\r\n    window.scrollBy({\r\n      top: topElement,\r\n      behavior: 'smooth',\r\n    });\r\n    linksInternos.forEach((link) => link.classList.remove('ativo'));\r\n    this.classList.add('ativo');\r\n  }\r\n\r\n  if (linksInternos) {\r\n    linksInternos.forEach((link) =>\r\n      link.addEventListener('click', handleClick),\r\n    );\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/scroll-suave.js?");
 
 /***/ }),
 
@@ -50,13 +60,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/js/modules/validate-cep.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/validate-cep.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ValidateCep)\n/* harmony export */ });\nclass ValidateCep {\r\n  constructor(element) {\r\n    this.element = element;\r\n  }\r\n\r\n  clear(cep) {\r\n    return cep.replace(/\\D/g, '');\r\n  }\r\n\r\n  buildCep(cep) {\r\n    return cep.replace(/(\\d{5})(\\d{3})/g, '$1-$2');\r\n  }\r\n\r\n  format(cep) {\r\n    const cepClear = this.clear(cep);\r\n    return this.buildCep(cepClear);\r\n  }\r\n\r\n  valid(cep) {\r\n    const matchCep = cep.match(/\\d{5}[-.]?\\d{3}/g);\r\n    return matchCep && matchCep[0] === cep;\r\n  }\r\n\r\n  validateOnChange(cepElement) {\r\n    if (this.valid(cepElement.value)) {\r\n      cepElement.value = this.format(cepElement.value);\r\n      cepElement.classList.remove('erro');\r\n      cepElement.nextElementSibling.classList.remove('ativo');\r\n    } else {\r\n      cepElement.classList.add('erro');\r\n      cepElement.nextElementSibling.classList.add('ativo');\r\n    }\r\n  }\r\n\r\n  createErroSpan() {\r\n    const span = document.createElement('span');\r\n    span.innerText = 'CEP incorreto';\r\n    span.classList.add('erro_text');\r\n    this.element.parentElement.insertBefore(\r\n      span,\r\n      this.element.nextElementSibling,\r\n    );\r\n  }\r\n\r\n  addEvent() {\r\n    this.element.addEventListener('change', () => {\r\n      this.validateOnChange(this.element);\r\n    });\r\n  }\r\n\r\n  init() {\r\n    this.addEvent();\r\n    this.createErroSpan();\r\n    return this;\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/validate-cep.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/validate-cpf.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/validate-cpf.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ValidateCpf)\n/* harmony export */ });\nclass ValidateCpf {\r\n  constructor(element) {\r\n    this.element = element;\r\n  }\r\n\r\n  clear(cpf) {\r\n    return cpf.replace(/\\D/g, '');\r\n  }\r\n\r\n  buildCpf(cpf) {\r\n    return cpf.replace(/(\\d{3})(\\d{3})(\\d{3})(\\d{2})/g, '$1.$2.$3-$4');\r\n  }\r\n\r\n  format(cpf) {\r\n    const cpfClear = this.clear(cpf);\r\n    return this.buildCpf(cpfClear);\r\n  }\r\n\r\n  valid(cpf) {\r\n    const matchCpf = cpf.match(/(?:\\d{3}[.-]?){3}\\d{2}/g);\r\n    return matchCpf && matchCpf[0] === cpf;\r\n  }\r\n\r\n  validateOnChange(cpfElement) {\r\n    if (this.valid(cpfElement.value)) {\r\n      cpfElement.value = this.format(cpfElement.value);\r\n      cpfElement.classList.remove('erro');\r\n      cpfElement.nextElementSibling.classList.remove('ativo');\r\n    } else {\r\n      cpfElement.classList.add('erro');\r\n      cpfElement.nextElementSibling.classList.add('ativo');\r\n    }\r\n  }\r\n\r\n  createErroSpan() {\r\n    const span = document.createElement('span');\r\n    span.innerText = 'CPF incorreto';\r\n    span.classList.add('erro_text');\r\n    this.element.parentElement.insertBefore(\r\n      span,\r\n      this.element.nextElementSibling,\r\n    );\r\n  }\r\n\r\n  addEvent() {\r\n    this.element.addEventListener('change', () => {\r\n      this.validateOnChange(this.element);\r\n    });\r\n  }\r\n\r\n  init() {\r\n    this.addEvent();\r\n    this.createErroSpan();\r\n    return this;\r\n  }\r\n}\r\n\n\n//# sourceURL=webpack://web/./src/js/modules/validate-cpf.js?");
+
+/***/ }),
+
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scroll_suave_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scroll-suave.js */ \"./src/js/modules/scroll-suave.js\");\n/* harmony import */ var _modules_alter_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/alter-header.js */ \"./src/js/modules/alter-header.js\");\n/* harmony import */ var _modules_selection_plano_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/selection-plano.js */ \"./src/js/modules/selection-plano.js\");\n/* harmony import */ var _modules_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/dropdown-menu.js */ \"./src/js/modules/dropdown-menu.js\");\n\r\n\r\n\r\n\r\n\r\n(0,_modules_scroll_suave_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_alter_header_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_selection_plano_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\n\n//# sourceURL=webpack://web/./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scroll_suave_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scroll-suave.js */ \"./src/js/modules/scroll-suave.js\");\n/* harmony import */ var _modules_alter_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/alter-header.js */ \"./src/js/modules/alter-header.js\");\n/* harmony import */ var _modules_selection_plano_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/selection-plano.js */ \"./src/js/modules/selection-plano.js\");\n/* harmony import */ var _modules_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/dropdown-menu.js */ \"./src/js/modules/dropdown-menu.js\");\n/* harmony import */ var _modules_validate_cpf_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/validate-cpf.js */ \"./src/js/modules/validate-cpf.js\");\n/* harmony import */ var _modules_validate_cep_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/validate-cep.js */ \"./src/js/modules/validate-cep.js\");\n/* harmony import */ var _modules_close_popup_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/close-popup.js */ \"./src/js/modules/close-popup.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_scroll_suave_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_alter_header_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_selection_plano_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n(0,_modules_close_popup_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\r\nconst cpf = document.querySelector('#cpf');\r\nconst cep = document.querySelector('#cep');\r\nif (cpf) new _modules_validate_cpf_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"](cpf).init();\r\nif (cep) new _modules_validate_cep_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"](cep).init();\r\n\n\n//# sourceURL=webpack://web/./src/js/script.js?");
 
 /***/ })
 
