@@ -174,6 +174,7 @@
   
   <?php if(isset($_SESSION['erroCadastro'])):?>
   <div id="dados_incorretos">
+    <button data-popup="fechar" class="fechar">X</button>
     <p><?php echo $_SESSION['erroCadastro'] ?></p>
     <img class="img_erro" src="src/img/error.svg" alt="Erro no cadastro">
   </div>
