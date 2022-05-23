@@ -5,6 +5,7 @@ import initDropdownMenu from './modules/dropdown-menu.js';
 import ValidateCpf from './modules/validate-cpf.js';
 import ValidateCep from './modules/validate-cep.js';
 import initClosePopup from './modules/close-popup.js';
+import initUserNameLimited from './modules/username-limited.js';
 
 initScrollSuave();
 initAlterHeader();
@@ -15,3 +16,4 @@ const cpf = document.querySelector('#cpf');
 const cep = document.querySelector('#cep');
 if (cpf) new ValidateCpf(cpf).init();
 if (cep) new ValidateCep(cep).init();
+initUserNameLimited();
