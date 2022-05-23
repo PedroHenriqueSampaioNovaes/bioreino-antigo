@@ -22,7 +22,7 @@
 <body>
   <?php include("php/coletaNome.php"); ?>
   <header class="cabecalho">
-    <a href="/" class="logo">
+    <a href="index.html" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
     </a>
     <nav class="nav_usuario" data-dropdown="nav">
