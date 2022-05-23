@@ -148,8 +148,82 @@ Vídeos */
 
 .container_cursos .cursos .lista_videos .video {
   display: block;
-  background: #484B4D;
+  background: none;
   width: 100%;
   height: 100%;
   cursor: pointer;
 }
+
+
+
+/* Inserção para estilo dos cursos (arrumar) */
+
+/* removi o .cursos pois não existe isso na dashboard 
+Além disso, inseri uma div class = boxCurso somente no php (verificaPlano),
+para que pudesse acrescentar uma borda no curso (que pode ser substituida por uma sombra) */
+
+/* Cursos */
+.boxCurso {
+  border: 1px solid var(--borda-verde);
+  border-radius: 20px;
+}
+
+.titulo_curso {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 5px;
+}
+
+.descricao_curso {
+  padding: 10px 10px 10px;
+}
+
+.titulo_curso h3 {
+  font-size: 24px;
+  line-height: 20px;
+}
+
+.titulo_curso .tipo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.titulo_curso .tipo span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #707070;
+}
+
+.descricao_curso p:nth-of-type(2) {
+  min-width: 277px;
+}
+
+.professor {
+  display: block;
+  font-size: 12px;
+  margin: 4px 0;
+  color: #707070;
+}
+
+.descricao_curso .sobre {
+  font-size: 14px;
+}
+
+/* Cores da palavra KIDS */
+.letra_vermelho {
+  color: #ea7878;
+}
+
+.letra_laranja {
+  color: #eda86b;
+}
+
+.letra_azul {
+  color: #ace2e5;
+}
+
+.letra_verde {
+  color: #ace5b2;
+} 

@@ -20,13 +20,7 @@
 </head>
 
 <body>
-  <?php
-    session_start();
-    include('php/conexao.php'); // conecta com o banco
-    $email = $_SESSION['email'];
-    $query = mysqli_query($conexao, "SELECT nome FROM alunos WHERE email = '{$email}'");
-    $row = mysqli_fetch_array($query);
-  ?>
+  <?php include("php/coletaNome.php"); ?>
   <header class="cabecalho">
     <a href="/" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino">
@@ -38,7 +32,7 @@
       </div>
       <ul class="opcoes_usuario" data-dropdown="menu">
         <li>
-          <form action="/php/sair.php">
+          <form action="php/sair.php">
             <button type="submit" class="btn_sair">Sair</button>
           </form>
         </li>
@@ -50,10 +44,10 @@
 
   <section class="container_cursos">
     <h1 class="titulo_cursos">Meus cursos</h1>
-    <main class="cursos">
+    <main class="cursos"> <?php include("php/verificaPlano.php"); ?> <!-- Pega o curso de acordo com plano -->
       <ul class="lista_videos">
         <li>
-          <div class="video"></div>
+          <div class="video"><?php echo $curso1 ?></div>
         </li>
         <li>
           <div class="video"></div>
