@@ -27,7 +27,7 @@
     </a>
     <nav class="nav_usuario" data-dropdown="nav">
       <div class="login_usuario">
-        <p class="nome_usuario"><?php echo $row['nome'] ?></p>
+        <p class="nome_usuario" data-usuario="name"><?php echo $row['nome'] ?></p>
         <span class="foto_usuario"></span>
       </div>
       <ul class="opcoes_usuario" data-dropdown="menu">
