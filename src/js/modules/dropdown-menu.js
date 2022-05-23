@@ -11,6 +11,7 @@ export default function initDropdownMenu() {
   }
   
   function openMenu(event) {
+    if (event.type === 'touch') event.preventDefault();
     menuDropdown.classList.add('ativo');
     const outside = 'data-outside';
   
