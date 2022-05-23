@@ -75,14 +75,6 @@ input {
   margin-bottom: 40px;
 }
 
-/* .conjunto_dados {
-  margin-bottom: 20px;
-}
-
-.conjunto_dados input:not(input:last-child), .conjunto_dados .divisor > div {
-  margin-bottom: 20px;
-} */
-
 .dados h2 {
   font-size: 24px;
   font-weight: normal;
@@ -147,43 +139,6 @@ input {
 .btn:hover {
   background: var(--bg-verde-escuro);
   color: #fff;
-}
-
-/* Erro */
-#dados_incorretos {
-  position: fixed;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 400px;
-  width: 100%;
-  background: #eb3f17;
-  text-align: center;
-  color: #fff;
-  border-radius: 20px;
-  padding: 10px;
-}
-
-#dados_incorretos .fechar {
-  content: 'X';
-  cursor: pointer;
-  position: absolute;
-  left: 94%;
-  background: none;
-  color: #fff;
-  border: none;
-}
-
-#dados_incorretos p {
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-
-#dados_incorretos .img_erro {
-  width: 25px;
 }
 
 /* Campo erro */

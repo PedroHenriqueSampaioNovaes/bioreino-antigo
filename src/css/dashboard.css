@@ -35,6 +35,9 @@ Usuário */
   align-items: center;
   cursor: pointer;
   transition: 0.15s ease-in-out;
+  background: #fff;
+  position: relative;
+  z-index: 1;
 }
 
 .cabecalho .login_usuario:hover {
@@ -59,40 +62,40 @@ Usuário */
   position: absolute;
   top: 40px;
   left: 50%;
-  padding-top: 50px;
   transform: translateX(-50%);
   width: 100%;
   border-left: 1px solid var(--borda-verde);
   border-right: 1px solid var(--borda-verde);
   border-bottom: 1px solid var(--borda-verde);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  /* height: 0; */
-  visibility: hidden;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
   overflow: hidden;
-  transition: .1s ease-in;
+  visibility: hidden;
 }
 
 .nav_usuario .opcoes_usuario.ativo {
-  /* height: 26px; */
   visibility: visible;
 }
 
 .nav_usuario .opcoes_usuario .btn_sair {
   display: block;
   width: 100%;
-  background: none;
+  background: #eb3f17;
+  color: #000;
   border: none;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  transition: .15s ease-in-out;
-  padding: 5px;
+  padding: 0 5px 5px 5px;
+  transition: color .15s ease-in-out, padding-top .15s ease-in-out;
+}
+
+.nav_usuario .opcoes_usuario.ativo .btn_sair {
+  padding-top: 32px;
 }
 
 .nav_usuario .opcoes_usuario .btn_sair:hover {
-  background: #eb3f17;
   color: #fff;
 }
 
@@ -114,7 +117,7 @@ Vídeos */
 .container_cursos {
   max-width: 1303px;
   width: 100%;
-  margin: 80px auto;
+  margin: 50px auto;
   padding: 0 10px;
 }
 
@@ -123,7 +126,7 @@ Vídeos */
   font-size: 34px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .container_cursos .cursos {
@@ -140,21 +143,12 @@ Vídeos */
   row-gap: 40px;
 }
 
-.container_cursos .cursos .lista_videos li {
-  display: block;
-  width: 48%;
-  height: 250px;
-}
-
 .container_cursos .cursos .lista_videos .video {
   display: block;
   background: none;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
-
-
 
 /* Inserção para estilo dos cursos (arrumar) */
 
@@ -164,8 +158,10 @@ para que pudesse acrescentar uma borda no curso (que pode ser substituida por um
 
 /* Cursos */
 .boxCurso {
+  max-width: 390px;
   border: 1px solid var(--borda-verde);
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .titulo_curso {
