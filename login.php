@@ -14,6 +14,7 @@
 
   <!-- Style -->
   <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/geral.css">
   <link rel="stylesheet" href="./src/css/login.css">
   <title>Bioreino - Login</title>
 </head>
@@ -45,6 +46,7 @@
     $erro = $_SESSION['erro'];
     echo
     "<div id='dados_incorretos'>
+      <button data-popup='fechar' class='fechar'>X</button>
       <p>$erro</p>
       <img class='img_erro' src='src/img/error.svg' alt='Erro no login'>
     </div>";

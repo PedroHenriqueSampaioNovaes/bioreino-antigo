@@ -14,6 +14,7 @@
 
   <!-- Style -->
   <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/geral.css">
   <link rel="stylesheet" href="./src/css/cadastro.css">
   <link rel="stylesheet" href="./src/css/responsivo.css">
   <title>Bioreino - Cadastro</title>
@@ -95,7 +96,7 @@
           <label for="senha">Senha *</label>
           <input type="password" name="senha" id="senha" required>
           <label for="cpf">CPF *</label>
-          <input type="text" name="cpf" id="cpf" required  value=<?php echo $CPF?>>
+          <input type="text" name="cpf" id="cpf" required value=<?php echo $CPF?>>
           <label for="email">Email *</label>
           <input type="email" name="email" id="email" required value=<?php echo $EMAIL?>>
         </div>
@@ -103,11 +104,12 @@
           <h2>Endereço</h2>
           <div>
             <label for="pais">País *</label>
-            <select name="pais" id="pais"> <!-- Tirei o required para teste! -->
+            <select name="pais" id="pais">
+              <!-- Tirei o required para teste! -->
             </select>
             <div class="divisor">
               <div>
-                <label for="cep" >CEP *</label>
+                <label for="cep">CEP *</label>
                 <input type="text" name="cep" id="cep" required value=<?php echo $CEP?>>
               </div>
               <div>
@@ -137,13 +139,13 @@
               </div>
               <div>
                 <label for="num_cartao">número do cartão *</label>
-                <input type="text" name="num_cartao" id="num_cartao" required>
+                <input type="text" name="num_cartao" id="num_cartao" maxlength="16" required>
               </div>
             </div>
             <div class="divisor">
               <div>
                 <label for="validade">validade *</label>
-                <input type="text" name="validade" id="validade" placeholder="MM/AAAA" maxlength="7" required>
+                <input type="text" name="validade" id="validade" placeholder="MM/AAAA" maxlength="7" pattern="\d{3}-" required>
               </div>
               <div>
                 <label for="cod_seguranca">código de segurança *</label>
@@ -163,7 +165,9 @@
             </div>
             <div class="container_valor">
               <p>TOTAL DA COMPRA:</p>
-              <span class="total"><?php echo $preco ?></span>
+              <span class="total">
+                <?php echo $preco ?>
+              </span>
             </div>
           </div>
         </div>
@@ -171,11 +175,13 @@
       </form>
     </section>
   </div>
-  
+
   <?php if(isset($_SESSION['erroCadastro'])):?>
   <div id="dados_incorretos">
     <button data-popup="fechar" class="fechar">X</button>
-    <p><?php echo $_SESSION['erroCadastro'] ?></p>
+    <p>
+      <?php echo $_SESSION['erroCadastro'] ?>
+    </p>
     <img class="img_erro" src="src/img/error.svg" alt="Erro no cadastro">
   </div>
   <?php endif; unset($_SESSION['erroCadastro']);?>

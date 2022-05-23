@@ -47,22 +47,7 @@
     <main class="cursos"> <?php include("php/verificaPlano.php"); ?> <!-- Pega o curso de acordo com plano -->
       <ul class="lista_videos">
         <li>
-          <div class="video"><?php echo $curso1 ?></div>
-        </li>
-        <li>
-          <div class="video"></div>
-        </li>
-        <li>
-          <div class="video"></div>
-        </li>
-        <li>
-          <div class="video"></div>
-        </li>
-        <li>
-          <div class="video"></div>
-        </li>
-        <li>
-          <div class="video"></div>
+          <?php echo $curso1 ?>
         </li>
       </ul>
     </main>
