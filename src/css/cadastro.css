@@ -50,6 +50,7 @@ Formulário */
 
 label {
   display: block;
+  margin-top: 20px;
   margin-bottom: 5px;
   text-transform: uppercase;
   font-size: 16px;
@@ -74,19 +75,22 @@ input {
   margin-bottom: 40px;
 }
 
-.conjunto_dados {
+/* .conjunto_dados {
   margin-bottom: 20px;
 }
 
 .conjunto_dados input:not(input:last-child), .conjunto_dados .divisor > div {
   margin-bottom: 20px;
-}
+} */
 
 .dados h2 {
   font-size: 24px;
   font-weight: normal;
   color: #707070;
-  margin-bottom: 20px;
+}
+
+.dados .conjunto_dados:nth-child(n + 2) h2 {
+  margin-top: 20px;
 }
 
 .divisor {
@@ -160,6 +164,16 @@ input {
   padding: 10px;
 }
 
+#dados_incorretos .fechar {
+  content: 'X';
+  cursor: pointer;
+  position: absolute;
+  left: 94%;
+  background: none;
+  color: #fff;
+  border: none;
+}
+
 #dados_incorretos p {
   font-size: 16px;
   font-weight: bold;
@@ -170,4 +184,19 @@ input {
 
 #dados_incorretos .img_erro {
   width: 25px;
+}
+
+/* Campo erro */
+.erro {
+  border: 1px solid #eb3f17;
+}
+
+/* Span Erro Text */
+.erro_text {
+  display: none;
+  color: #eb3f17;
+}
+
+.erro_text.ativo {
+  display: block;
 }

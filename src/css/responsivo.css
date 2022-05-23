@@ -8,6 +8,12 @@
   .depoimentos .depoimento_aluno .frase_aluno::before {
     display: none;
   }
+
+  /* ---------------- 
+  Vídeos */
+  .container_cursos {
+    max-width: 1052px;
+  }
 }
 
 @media screen and (max-width: 1140px) {
@@ -25,6 +31,12 @@
   Cabecalho  */
   .cabecalho {
     padding: 0 10px;
+  }
+
+  /* ---------------- 
+  Vídeos */
+  .container_cursos {
+    max-width: 1102px;
   }
 }
 

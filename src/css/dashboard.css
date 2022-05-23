@@ -34,6 +34,11 @@ Usuário */
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.cabecalho .login_usuario:hover {
+  box-shadow: 0 0 8px var(--bg-verde-claro);
 }
 
 .cabecalho .login_usuario .nome_usuario {
@@ -52,22 +57,24 @@ Usuário */
 .nav_usuario .opcoes_usuario {
   display: block;
   position: absolute;
-  top: 68px;
+  top: 40px;
   left: 50%;
+  padding-top: 50px;
   transform: translateX(-50%);
-  width: 76%;
+  width: 100%;
   border-left: 1px solid var(--borda-verde);
   border-right: 1px solid var(--borda-verde);
   border-bottom: 1px solid var(--borda-verde);
-  border-radius: 4px;
-  height: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* height: 0; */
   visibility: hidden;
   overflow: hidden;
   transition: .1s ease-in;
 }
 
 .nav_usuario .opcoes_usuario.ativo {
-  height: 26px;
+  /* height: 26px; */
   visibility: visible;
 }
 
@@ -77,6 +84,7 @@ Usuário */
   background: none;
   border: none;
   font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
   transition: .15s ease-in-out;
@@ -84,7 +92,7 @@ Usuário */
 }
 
 .nav_usuario .opcoes_usuario .btn_sair:hover {
-  background: var(--bg-verde-escuro);
+  background: #eb3f17;
   color: #fff;
 }
 
@@ -104,7 +112,7 @@ Linha */
 /* ---------------
 Vídeos */
 .container_cursos {
-  max-width: 850px;
+  max-width: 1303px;
   width: 100%;
   margin: 80px auto;
   padding: 0 10px;
@@ -122,6 +130,7 @@ Vídeos */
   border: 1px solid var(--borda-verde);
   border-radius: 5px;
   padding: 40px;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 21%);
 }
 
 .container_cursos .cursos .lista_videos {
