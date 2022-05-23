@@ -64,11 +64,8 @@ Usuário */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  border-left: 1px solid var(--borda-verde);
-  border-right: 1px solid var(--borda-verde);
-  border-bottom: 1px solid var(--borda-verde);
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   overflow: hidden;
   visibility: hidden;
 }
