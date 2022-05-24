@@ -15,6 +15,7 @@
   <!-- Style -->
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/geral.css">
+  <link rel="stylesheet" href="./src/css/animacoes.css">
   <link rel="stylesheet" href="./src/css/login.css">
   <title>Bioreino - Login</title>
 </head>

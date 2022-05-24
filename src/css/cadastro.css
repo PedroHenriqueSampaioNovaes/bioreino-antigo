@@ -46,6 +46,7 @@ Formulário */
   border: 1px solid #000;
   border-radius: 20px;
   box-shadow: 0 0 8px 0 rgb(0 0 0 / 21%);
+  animation: fadeDown 1s forwards;
 }
 
 label {

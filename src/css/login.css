@@ -17,6 +17,7 @@ body {
   margin: 0 auto;
   border-radius: 20px;
   padding: 30px 20px;
+  animation: fadeDown 1s forwards;
 }
 
 .logo {

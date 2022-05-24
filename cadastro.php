@@ -15,6 +15,7 @@
   <!-- Style -->
   <link rel="stylesheet" href="./src/css/reset.css">
   <link rel="stylesheet" href="./src/css/geral.css">
+  <link rel="stylesheet" href="./src/css/animacoes.css">
   <link rel="stylesheet" href="./src/css/cadastro.css">
   <link rel="stylesheet" href="./src/css/responsivo.css">
   <title>Bioreino - Cadastro</title>
