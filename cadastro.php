@@ -105,7 +105,7 @@
           <h2>Endereço</h2>
           <div>
             <label for="pais">País *</label>
-            <select name="pais" id="pais">
+            <select name="pais" id="pais" required>
               <!-- Tirei o required para teste! -->
             </select>
             <div class="divisor">

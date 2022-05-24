@@ -44,7 +44,7 @@
 
   <section class="container_cursos">
     <h1 class="titulo_cursos">Meus cursos</h1>
-    <main class="cursos"> <?php include("php/verificaPlano.php"); ?> <!-- Pega o curso de acordo com plano -->
+    <main class="cursos"><?php include("php/verificaPlano.php"); ?> <!-- Pega o curso de acordo com plano -->
       <ul class="lista_videos">
         <li>
           <?php echo $curso1 ?>
