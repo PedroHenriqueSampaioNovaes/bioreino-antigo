@@ -145,7 +145,7 @@
             <div class="divisor">
               <div>
                 <label for="validade">validade *</label>
-                <input type="text" name="validade" id="validade" placeholder="MM/AAAA" maxlength="7" pattern="\d{3}-" required>
+                <input type="text" name="validade" id="validade" placeholder="MM/AAAA" maxlength="6" required>
               </div>
               <div>
                 <label for="cod_seguranca">código de segurança *</label>
