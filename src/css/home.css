@@ -320,16 +320,6 @@ Depoimentos */
   position: relative;
 }
 
-.depoimentos .depoimento_aluno .frase_aluno::before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #000;
-  position: absolute;
-  top: -10px;
-}
-
 /* --------------- 
 Planos */
 .sessao_planos {
