@@ -1,6 +1,6 @@
 export default class ValidateCpf {
   constructor(element) {
-    this.element = element;
+    this.element = document.querySelector(element);
   }
 
   clear(cpf) {
