@@ -1,6 +1,6 @@
 export default class ValidateValidade {
   constructor(element) {
-    this.element = element;
+    this.element = document.querySelector(element);
   }
 
   clear(validade) {
@@ -49,8 +49,10 @@ export default class ValidateValidade {
   }
 
   init() {
-    this.addEvent();
-    this.createErroSpan();
+    if (this.element) {
+      this.addEvent();
+      this.createErroSpan();
+    }
     return this;
   }
 }
