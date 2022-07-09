@@ -106,7 +106,16 @@
           <div>
             <label for="pais">País *</label>
             <select name="pais" id="pais" required>
-              <!-- Tirei o required para teste! -->
+              <option value="brasil">Brasil</option>
+              <option value="argentina">Argentina</option>
+              <option value="bolivia">Bolívia</option>
+              <option value="colombia">Colômbia</option>
+              <option value="chile">Chile</option>
+              <option value="equador">Equador</option>
+              <option value="guiana">Guiana</option>
+              <option value="paraguai">Paraguai</option>
+              <option value="uruguai">Uruguai</option>
+              <option value="venezuela">Venezuela</option>
             </select>
             <div class="divisor">
               <div>

@@ -7,6 +7,7 @@ import ValidateCep from './modules/validate-cep.js';
 import initClosePopup from './modules/close-popup.js';
 import initUserNameLimited from './modules/username-limited.js';
 import ValidateValidade from './modules/validate-validade.js';
+import initFetchPais from './modules/fetch-pais.js';
 
 initScrollSuave();
 initAlterHeader();
@@ -20,3 +21,4 @@ if (cpf) new ValidateCpf(cpf).init();
 if (cep) new ValidateCep(cep).init();
 if (validade) new ValidateValidade(validade).init();
 initUserNameLimited();
+initFetchPais();
