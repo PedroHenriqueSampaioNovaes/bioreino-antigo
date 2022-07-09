@@ -49,8 +49,10 @@ export default class ValidateCpf {
   }
 
   init() {
-    this.addEvent();
-    this.createErroSpan();
+    if (this.element) {
+      this.addEvent();
+      this.createErroSpan();
+    }
     return this;
   }
 }
