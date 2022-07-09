@@ -14,11 +14,15 @@ initAlterHeader();
 initSelectionPlano();
 initDropdownMenu();
 initClosePopup();
+
 const validateCpf = new ValidateCpf('#cpf');
 validateCpf.init();
+
 const cep = new ValidateCep('#cep');
 cep.init();
+
 const validade = new ValidateValidade('#validade');
 validade.init();
+
 initUserNameLimited();
 initFetchPais();
