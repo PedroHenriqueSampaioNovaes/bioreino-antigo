@@ -1,3 +1,7 @@
+.cabecalho, .introducao, .cursos, .planos, .depoimentos, .precos {
+  max-width: 1440px;
+}
+
 /* ---------------
 Cabeçalho */
 .cabecalho {
@@ -322,12 +326,12 @@ Depoimentos */
 
 /* --------------- 
 Planos */
-.sessao_planos {
+.precos {
   padding: 30px 90px;
 }
 
-.sessao_planos .secao_titulo h2,
-.sessao_planos .secao_titulo p {
+.precos .secao_titulo h2,
+.precos .secao_titulo p {
   color: #000;
 }
 
