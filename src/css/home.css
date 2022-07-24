@@ -1,4 +1,9 @@
-.cabecalho, .introducao, .cursos, .planos, .depoimento, .precos {
+.cabecalho,
+.introducao,
+.cursos,
+.planos,
+.depoimento,
+.precos {
   max-width: 1440px;
 }
 
@@ -25,7 +30,7 @@ Cabeçalho */
   padding-bottom: 20px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.274);
   z-index: 999;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .logo {
@@ -327,7 +332,7 @@ Depoimentos */
 /* --------------- 
 Planos */
 .precos {
-  padding: 30px 90px;
+  padding: 30px 0;
 }
 
 .precos .secao_titulo h2,
@@ -337,18 +342,25 @@ Planos */
 
 .container_planos {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   column-gap: 10px;
 }
 
 .container_planos > div {
   max-width: 400px;
   width: 100%;
+  margin: 0 10px;
   padding: 30px 0;
   border: 1px solid var(--borda-verde);
   border-radius: 20px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.205);
+}
+
+.container_planos > div:nth-child(1),
+.container_planos > div:nth-child(2) {
+  margin-bottom: 20px;
 }
 
 .container_planos .plano_titulo {
