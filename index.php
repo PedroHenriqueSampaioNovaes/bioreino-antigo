@@ -215,7 +215,7 @@
         <div>
           <h2 class="plano_titulo">PROFESSIONAL</h2>
           <ul class="propriedades">
-            <li>Cursos voltados para mercado de trabalho</li>
+            <li>Cursos voltados para o mercado de trabalho</li>
             <li>Eficiência para desempenhar seu papel no mercado</li>
             <li>Certificado de conclusão</li>
             <li>12 meses de acesso ilimitado</li>
