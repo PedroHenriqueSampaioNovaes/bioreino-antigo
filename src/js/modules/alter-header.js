@@ -1,5 +1,5 @@
 export default function initAlterHeader() {
-  const cabecalho = document.querySelector('[data-scroll]');
+  const cabecalho = document.querySelector('[data-header]');
 
   function toggleHeader() {
     const distanciaScroll = window.pageYOffset > 20;
