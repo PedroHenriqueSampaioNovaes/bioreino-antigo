@@ -1,3 +1,5 @@
+import debounce from './debounce.js';
+
 export default class ScrollSuave {
   constructor(internalLink, header, listSection) {
     this.internalLinks = document.querySelectorAll(internalLink);
@@ -7,7 +9,7 @@ export default class ScrollSuave {
 
     // Functions bind
     this.getScrollTopByHref = this.getScrollTopByHref.bind(this);
-    this.changeLinkActiveToScroll = this.changeLinkActiveToScroll.bind(this);
+    this.changeLinkActiveToScroll = debounce(this.changeLinkActiveToScroll.bind(this), 200);
   }
 
   getDistance() {
