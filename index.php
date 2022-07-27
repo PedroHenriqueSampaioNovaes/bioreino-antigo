@@ -21,15 +21,15 @@
 </head>
 
 <body>
-  <header class="cabecalho" data-scroll>
+  <header class="cabecalho" data-header>
     <a href="index.html" class="logo">
       <img src="src/img/bioreino.svg" alt="Logo da Bioreino.">
     </a>
     <nav class="nav_interna" aria-label="direciona para as respectivas seções">
       <ul class="itens_secoes_internas">
-        <li><a href="#cursos" aria-labelledby="cursos">Cursos</a></li>
-        <li><a href="#sobre_planos" aria-labelledby="sobre_planos">Sobre os planos</a></li>
-        <li><a href="#depoimentos" aria-labelledby="depoimentos">Depoimentos</a></li>
+        <li><a href="#cursos" aria-labelledby="cursos" data-indice>Cursos</a></li>
+        <li><a href="#sobre_planos" aria-labelledby="sobre_planos" data-indice>Sobre os planos</a></li>
+        <li><a href="#depoimentos" aria-labelledby="depoimentos" data-indice>Depoimentos</a></li>
       </ul>
     </nav>
     <nav aria-label="Login e cadastramento">
@@ -50,7 +50,7 @@
     <img src="src/img/mulher.svg" alt="">
   </section>
 
-  <section class="cursos" id="cursos">
+  <section class="cursos" id="cursos" data-scroll>
     <div class="secao_titulo">
       <h2>Cursos</h2>
       <p>conheça alguns de nossos cursos</p>
@@ -107,7 +107,7 @@
   </section>
 
   <main>
-    <section class="planos" id="sobre_planos">
+    <section class="planos" id="sobre_planos" data-scroll>
       <div class="secao_titulo">
         <h2>Conheça nossos planos</h2>
         <p>fique por dentro de tudo sobre os planos oferecidos</p>
@@ -136,7 +136,7 @@
       </div>
     </section>
 
-    <section class="depoimento" id="depoimentos">
+    <section class="depoimento" id="depoimentos" data-scroll>
       <div class="secao_titulo">
         <h2>Depoimentos</h2>
         <p>o que alguns de nossos alunos disseram de nossos cursos</p>
@@ -215,7 +215,7 @@
         <div>
           <h2 class="plano_titulo">PROFESSIONAL</h2>
           <ul class="propriedades">
-            <li>Cursos voltados para o mercado de trabalho</li>
+            <li>Cursos voltados para mercado de trabalho</li>
             <li>Eficiência para desempenhar seu papel no mercado</li>
             <li>Certificado de conclusão</li>
             <li>12 meses de acesso ilimitado</li>
