@@ -8,46 +8,75 @@ export default class ScrollSuave {
     this.activeClass = 'ativo';
 
     // Functions bind
-    this.getScrollTopByHref = this.getScrollTopByHref.bind(this);
-    this.changeLinkActiveToScroll = debounce(this.changeLinkActiveToScroll.bind(this), 200);
+    this.getCurrentEvent = this.getCurrentEvent.bind(this);
+    this.changeLinkActiveToScroll = debounce(
+      this.changeLinkActiveToScroll.bind(this),
+      200,
+    );
+    this.onResize = debounce(this.onResize.bind(this), 200);
   }
 
   getDistance() {
     this.elementDistance = [...this.sections].map((element) => {
       return {
-        element, 
-        top: element.offsetTop,
-        bottom: element.offsetTop + element.offsetHeight
+        element,
+        distMin: element.offsetTop - this.header.offsetHeight, // Distância do elemento em relação ao topo da página menos a altura do cabeçalho
+        distMax:
+          element.offsetTop +
+          element.offsetHeight -
+          this.header.clientHeight - 1,
       };
     });
   }
 
-  getScrollTopByHref(event) {
+  getCurrentEvent(event) {
     event.preventDefault();
-    const link = event.currentTarget;
+    if (event.type === 'scroll') {
+      this.changeLinkActiveToScroll();
+    } else if (event.type === 'click') {
+      this.scrollToClick(event.currentTarget);
+    }
+  }
+
+  scrollToClick(target) {
+    const link = target;
     const href = link.getAttribute('href');
-    const sectionDistance = document.querySelector(href).offsetTop;
 
-    const topElement = sectionDistance - this.header.offsetHeight;
-    this.smoothScrollTo(topElement, 1000);
+    if (link.hasAttribute('data-indice')) {
+      this.elementDistance.forEach((dist) => {
+        const elementToScroll = `#${dist.element.getAttribute('id')}`;
+        if (elementToScroll === href) {
+          this.smoothScrollTo(dist.distMin, 1000);
+        }
+      });
 
-    this.alterClassLinksToClick(link);
+      this.alterClassLinksToClick(link);
+    } else {
+      const sectionTarget = document.querySelector(href);
+      const distSection = sectionTarget.offsetTop - this.header.offsetHeight;
+      console.log(this.header.offsetHeight)
+      this.smoothScrollTo(distSection, 1000);
+    }
   }
 
   changeLinkActiveToScroll() {
-    this.elementDistance.forEach((d, i) => {
+    this.elementDistance.forEach((dist, i) => {
       const scrollYPage = window.pageYOffset;
-      if (scrollYPage > d.top && scrollYPage < d.bottom) {
+      if (scrollYPage >= dist.distMin - 1 && scrollYPage < dist.distMax) {
         this.internalLinks[i].classList.add(this.activeClass);
       } else {
         this.internalLinks[i].classList.remove(this.activeClass);
       }
-    })
+    });
   }
 
   alterClassLinksToClick(link) {
     this.internalLinks.forEach((l) => l.classList.remove(this.activeClass));
     link.classList.add(this.activeClass);
+  }
+
+  onResize() {
+    this.getDistance();
   }
 
   /**
@@ -81,9 +110,10 @@ export default class ScrollSuave {
 
   addScrollEvent() {
     this.internalLinks.forEach((link) =>
-      link.addEventListener('click', this.getScrollTopByHref),
+      link.addEventListener('click', this.getCurrentEvent),
     );
-    window.addEventListener('scroll', this.changeLinkActiveToScroll);
+    window.addEventListener('scroll', this.getCurrentEvent);
+    window.addEventListener('resize', this.onResize);
   }
 
   init() {

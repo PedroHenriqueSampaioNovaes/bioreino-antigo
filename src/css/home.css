@@ -14,9 +14,7 @@ Cabeçalho */
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 60px;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  padding: 30px 60px 50px;
 }
 
 .cabecalho.scroll {
@@ -25,9 +23,7 @@ Cabeçalho */
   top: 0;
   left: 0;
   background: #fff;
-  margin-top: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 60px 20px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.274);
   z-index: 999;
   transition: 0.4s;
