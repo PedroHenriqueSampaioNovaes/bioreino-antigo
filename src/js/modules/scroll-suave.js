@@ -54,7 +54,6 @@ export default class ScrollSuave {
     } else {
       const sectionTarget = document.querySelector(href);
       const distSection = sectionTarget.offsetTop - this.header.offsetHeight;
-      console.log(this.header.offsetHeight)
       this.smoothScrollTo(distSection, 1000);
     }
   }
